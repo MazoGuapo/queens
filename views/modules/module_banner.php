@@ -36,13 +36,13 @@
         class="wrapper_content flex flex-col text-center w-2/5">
 
         <?php if($content['sobretitulo']) { ?>
-        <div class="surtitle pb-20">
+        <div class="surtitle pb-10">
             <p class="text-white"><?php echo $content['sobretitulo']; ?></p>
         </div>
         <?php } ?>
 
         <?php if($content['titulo']) { ?>
-        <div class="title pb-20">
+        <div class="title pb-10">
             <p class="text-<?php echo $content['tamano_titulo']; ?> font-primary font-thin text-white">
                 <?php echo $content['titulo']; ?>
             </p>
@@ -50,13 +50,13 @@
         <?php } ?>
 
         <?php if($content['subtitulo']) { ?>
-        <div class="subtitle pb-20">
+        <div class="subtitle pb-10">
             <p class="text-white"><?php echo $content['subtitulo']; ?></p>
         </div>
         <?php } ?>
 
         <?php if($content['cuerpo']) { ?>
-        <div class="body text-white">
+        <div class="body pb-10">
             <?php echo $content['cuerpo']; ?>
         </div>
         <?php } ?>
@@ -67,11 +67,11 @@
             <?php foreach($buttons as $button) { ?>
 
             <?php if($button['link_externo']) { ?>
-            <a href="<?php echo $button['link_externo']; ?>" class="">
+            <a class="btn" href="<?php echo $button['link_externo']; ?>" class="">
                 <?php if($button['icono']) { ?>
                 <img src="<?php echo $button['icono']['sizes']['theme_full']; ?>">
                 <?php } ?>
-                <p><?php echo $button['titulo']; ?></p>
+                <?php echo $button['titulo']; ?>
             </a>
             <?php } ?>
 

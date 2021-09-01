@@ -2,6 +2,17 @@
 /*********** HEADER ***********/
 /******************************/
 
+.header_gracias {
+  background-color: transparent !important;
+
+  .header_brand {
+    margin: 4rem 0 !important;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 // WRAP
 header {
   @extend %paddings_laterales;
