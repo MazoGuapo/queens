@@ -1,0 +1,53 @@
+// // _15_mapa.scss
+
+// /******************************/
+// /**** ANIMATED ELEMENTS *******/
+// /******************************/
+
+// /**** ANIMATED LETTERS *******/
+// .animated_letters p {
+//   line-height: 0.5em !important;
+
+//   > span {
+//     line-height: 0.8em;
+//     display: inline-block;
+//     overflow: hidden;
+
+//     span {
+//       display: inline-block;
+//       @include animaciones(0.5s);
+//       @include transladarY(120%);
+//       line-height: 1em;
+
+//       margin-right: 10px;
+
+//       @media (min-width: 768px) {
+//         margin-right: 12px;
+//       }
+
+//       @media (min-width: 992px) {
+//         margin-right: 14px;
+//       }
+
+//       @media (min-width: 1200px) {
+//         margin-right: 16px;
+//       }
+
+//       @media (min-width: 1400px) {
+//         margin-right: 18px;
+//       }
+
+//       @media (min-width: 1600px) {
+//         margin-right: 20px;
+//       }
+//     }
+
+//     &.loaded span {
+//       @include transladarY(-5px);
+
+//       @media (min-width: 1200px) {
+//         @include transladarY(-10px);
+//       }
+//     }
+//   }
+// }

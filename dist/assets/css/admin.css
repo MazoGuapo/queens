@@ -1,0 +1,15 @@
+.meta_custom {
+    background-color: rgb(97, 95, 109);
+    color: white;
+    border: 1px solid black;
+  }
+
+  .meta_custom .acf-fc-layout-handle {
+    background-color: rgb(69, 67, 78);
+    color: white !important;
+  }
+
+  .acf-fields  {
+    background-color: rgb(192, 189, 209) !important;
+    color: #333;
+  }

@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    margin                                  : 0;
+    padding                                 : 0 !important;
+    font-size                               : 0.625em;
+}
+
+body {
+    margin                                  : 0;
+    padding                                 : 0 !important;
+    width                                   : 100%;
+}
+
+h1,h2, h3, h4, h5, h6{
+    margin                                  : 0;
+    padding                                 : 0;
+}
+
+p {
+    margin                                  : 0;
+}
+
+ul {
+    margin                                  : 0;
+    padding                                 : 0;
+}
+
+li {
+    margin                                  : 0;
+    padding                                 : 0;
+    list-style                              : none;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.3s ease-in;
+	&:focus,
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

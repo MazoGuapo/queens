@@ -1,0 +1,49 @@
+%paddings_laterales {
+  padding-left: var(--padding_mobile);
+  padding-right: var(--padding_mobile);
+  @screen ipad {
+    padding-left: var(--padding_ipad);
+    padding-right: var(--padding_ipad);
+  }
+  @screen ipadH {
+    padding-left: var(--padding_ipadH);
+    padding-right: var(--padding_ipadH);
+  }
+  @screen laptop {
+    padding-left: var(--padding_laptop);
+    padding-right: var(--padding_laptop);
+  }
+  @screen desktop {
+    padding-left: var(--padding_desktop);
+    padding-right: var(--padding_desktop);
+  }
+  @screen wide {
+    padding-left: var(--padding_wide);
+    padding-right: var(--padding_wide);
+  }
+}
+
+%paddings_sections {
+    padding-top: var(--paddingS_mobile);
+    padding-bottom: var(--paddingS_mobile);
+    @screen ipad {
+      padding-top: var(--paddingS_ipad);
+      padding-bottom: var(--paddingS_ipad);
+    }
+    @screen ipadH {
+      padding-top: var(--paddingS_ipadH);
+      padding-bottom: var(--paddingS_ipadH);
+    }
+    @screen laptop {
+      padding-top: var(--paddingS_laptop);
+      padding-bottom: var(--paddingS_laptop);
+    }
+    @screen desktop {
+      padding-top: var(--paddingS_desktop);
+      padding-bottom: var(--paddingS_desktop);
+    }
+    @screen wide {
+      padding-top: var(--paddingS_wide);
+      padding-bottom: var(--paddingS_wide);
+    }
+  }

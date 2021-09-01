@@ -1,0 +1,25 @@
+// CORE
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import "core/variables.scss";
+
+@import 'core/mixins/mixins.scss';
+
+@import 'core/placeholder/placeholder.scss';
+
+@import 'core/reset.scss';
+
+@import 'core/typo/typo.scss';
+
+@import 'core/html.scss';
+
+// // MODULES
+
+@import 'components/components.scss';
+
+@import "layouts/layouts.scss";
+
+@import 'modules/modules.scss';

@@ -1,0 +1,20 @@
+section.module_icons {
+    .wrapper_content {
+      .surtitle {
+          display: flex;
+          align-items: center;
+
+        &::before {
+          content: "";
+          width: 50px;
+          height: 1px;
+          background: #FBF8EF;
+          width: 50px;
+        }
+
+        p {
+          margin-left: 15px;
+        }
+      }
+    }
+  }

@@ -1,0 +1,54 @@
+section.module {
+  &_banner {
+    position: relative;
+    // IMAGEN FONDO
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+      overflow: hidden;
+
+      // CAPA OSCURA
+      &:before {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+        content: "";
+        display: block;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.1) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+      }
+    }
+
+    .wrapper_content {
+      position: relative;
+      z-index: 1;
+
+      .title {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .scroll {
+      position: absolute;
+      z-index: 3;
+      bottom: 15%;
+      left: 50%;
+
+      p {
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

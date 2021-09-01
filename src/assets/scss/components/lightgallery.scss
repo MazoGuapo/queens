@@ -1,0 +1,150 @@
+// _14_lightgallery.scss
+
+/******************************/
+/***** MODAL FULLSCREEN *******/
+/******************************/
+
+// FONDO
+.lg-backdrop {
+    z-index               : 5000;
+    background            : black;
+}
+
+// TOOLBAR
+.lg-toolbar {
+    position                : absolute;
+    background              : transparent;
+    right                   : 50%;
+    left                    : initial !important;
+    top                     : 3rem !important;
+    opacity                 : 1 !important;
+    transform               : none !important;
+    text-align              : center;
+
+    z-index                 : 6000;
+}
+
+// CLOSE
+.lg-close  {
+   opacity: 0;
+}
+
+.lg-close {
+    position                : fixed;
+    background              : transparent;
+    right                   : initial;
+    left                    : 50% !important;
+    top                     : 3.2rem !important;
+    opacity                 : 1 !important;
+    text-align              : center;
+
+    z-index                 : 6000;
+    width                 : 40px !important;
+    height                : 40px !important;
+    background-image      : url(../assets/img/close.png) !important;
+    background-size       : cover !important;
+    line-height           : inherit !important;
+    text-shadow           : unset !important;
+    font-size             : 1.5rem !important;
+    font-family           : sans-serif;
+    font-weight           : 600;
+    padding               : 0 !important;
+    opacity               : 1 !important;
+    color                 : white !important;
+
+    &:hover {
+        color             : grey; }
+    &:after {
+        content           : '' !important;
+    }
+
+    @media ( min-width: 768px  ) {
+        top                     : 4.5rem !important;
+    }
+}
+
+// THUMB
+.lg-outer .lg-thumb {
+    padding                 : 0 !important;
+    border-top              : 3px solid white;
+}
+
+.lg-outer .lg-thumb-item {
+    border                  : 0 !important;
+    border-radius           : 0 !important;
+    margin                  : 0 !important;
+    width                   : 140px !important;
+}
+
+.lg-outer .lg-toogle-thumb {
+    display                 : none;
+}
+
+.lg-img-wrap {
+    padding               : 0 !important;
+}
+
+.lg-outer {
+    z-index               : 6000;
+}
+
+.lg-outer .lg-image {
+    height                : 100% !important;
+    width                 : auto !important;
+
+}
+
+.lg-sub-html {
+    background            : transparent;
+    position              : fixed;
+    z-index               : 7000;
+    width                 : 100%;
+    bottom                : 10rem;
+    left                  : 0;
+    text-align            : center;
+    font-size             : 1.4rem;
+    line-height           : 1em;
+    color                 : white;
+    padding               : 0 3rem 3rem 0;
+    text-align              : right;
+    @media ( min-width: 992px ) {
+        font-size         : 1.8rem;
+    }
+}
+
+.lg-actions {
+    position: unset;
+    button {
+        padding                   : 0 !important;
+        opacity                   : 1 !important;
+        position                  : absolute;
+        background                : transparent !important;
+        top                       : 50%;
+
+        width                     : 13px;
+        height                    : 31px;
+        overflow                  : hidden;
+        text-indent               : -999px;
+
+        @media ( min-width: 992px ) {
+            width                     : 15px;
+            height                    : 38px;
+        }
+
+        @media ( min-width: 992px ) {
+            width                     : 20px;
+            height                    : 50px;
+        }
+
+        &.lg-prev  {
+            left                  : 30px;
+            background-image      : url(../assets/img/arrow_gallery_left.png) !important;
+            background-size       : cover !important;
+        }
+        &.lg-next {
+            right                 : 30px;
+            background-image      : url(../assets/img/arrow_gallery_right.png) !important;
+            background-size       : cover !important;
+        }
+    }
+}

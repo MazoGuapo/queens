@@ -1,0 +1,14 @@
+.module {
+
+    // module block
+    &-block {
+        @extend %paddings_laterales;
+        @extend %paddings_sections;
+    }
+
+    // module full
+    &-full {
+        @extend %paddings_sections;
+    }
+
+}

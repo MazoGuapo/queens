@@ -1,0 +1,17 @@
+body {
+  background-color: white;
+  width: 100%;
+  @extend %fuente_regular;
+}
+
+// // SEPARADORES
+hr {
+  border-top: 1px solid black;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  width: 100%;
+
+  &.white_hr {
+    border-top: 1px solid white;
+  }
+}

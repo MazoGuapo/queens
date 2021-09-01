@@ -1,0 +1,32 @@
+section.module_two_columns {
+  .wrapper_content {
+    .surtitle {
+        display: flex;
+        align-items: center;
+
+      &::before {
+        content: "";
+        width: 50px;
+        height: 1px;
+        background: #7A736C;
+        width: 50px;
+      }
+
+      p {
+        margin-left: 25px;
+        // opacity: 0;
+      }
+    }
+  }
+}
+
+section.module_two_columns.active {
+    .surtitle {
+        &:before {
+            width: 50px;
+        }
+        p {
+            opacity: 1;
+        }
+    }
+}

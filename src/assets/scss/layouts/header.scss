@@ -1,0 +1,400 @@
+/******************************/
+/*********** HEADER ***********/
+/******************************/
+
+// WRAP
+header {
+  @extend %paddings_laterales;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logo menbut";
+  justify-content: center;
+  align-content: center;
+
+  @media (min-width: 992px) {
+    grid-template-areas: "logo nav";
+  }
+}
+
+.shrink header {
+  background-color: green_Fondos1;
+  padding-top: 3rem;
+}
+
+// BRAND
+.header_brand {
+  grid-area: logo;
+  justify-self: flex-start;
+  align-self: center;
+
+  margin: 1.5rem 0;
+
+  img {
+    width: 26px;
+
+    @media (min-width: 992px) {
+      width: 35px;
+    }
+  }
+}
+
+.shrink header .menu__brand {
+  opacity: 0;
+}
+
+// MENU
+header ul.menu {
+  justify-self: flex-end;
+  align-self: center;
+
+  grid-area: nav;
+
+  li a {
+    @apply font-secondary font-light text-primary;
+    position: relative;
+    display: inline-block;
+    margin-right: 1rem;
+
+    @media (min-width: 1200px) {
+      margin-right: 2rem;
+    }
+    @media (min-width: 1600px) {
+      margin-right: 3rem;
+    }
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      background: white;
+      bottom: 0;
+      left: 0;
+    }
+    &:hover {
+      color: white;
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+header ul.menu li.current a:after {
+  width: 100%;
+}
+
+.shrink header ul.menu li.current a {
+  color: white;
+  &:after {
+    width: 100%;
+    background-color: white;
+  }
+}
+
+.shrink header ul.menu li a {
+  color: white;
+  &:after {
+    background: white;
+  }
+  &:hover {
+    color: white;
+  }
+}
+
+// BUTTON MENU
+.menu-button {
+  grid-area: menbut;
+  justify-self: flex-end;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: 40px;
+  border: none;
+  padding: 0;
+  background: transparent;
+
+  text-indent: 2.5em;
+  font-size: 1.5em;
+  color: transparent;
+  text-align: right;
+
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    width: 32px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.menu-button span {
+  width: 100%;
+  height: 2px;
+  background: #645E58;
+  display: block;
+
+  &:nth-child(2) {
+    margin-top: 10px;
+    @media (min-width: 768px) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.menu-button:hover {
+  span {
+    width: 100%;
+  }
+}
+
+.shrink .menu-button span {
+  background-color: white;
+}
+
+// CLOSE MENU
+// .close-button {
+//   display: none;
+//   position: absolute;
+//   width: 36px;
+//   height: 30px;
+//   overflow: hidden;
+//   border: none;
+//   background: transparent;
+//   text-indent: 1em;
+//   font-size: 1em;
+//   color: transparent;
+//   cursor: pointer;
+
+//   right: 1.4rem;
+//   top: 2rem;
+
+//   @media (min-width: 768px) {
+//     right: 10rem;
+//     top: 4.5rem;
+//   }
+
+//   @media (min-width: 992px) {
+//     right: 4rem;
+//     top: 3.5rem;
+//   }
+
+//   &:focus {
+//     outline: none;
+//   }
+// }
+
+// .close-button::before,
+// .close-button::after {
+//   content: "";
+//   position: absolute;
+//   width: 2px;
+//   height: 100%;
+//   top: 0;
+//   left: 50%;
+//   background: white;
+
+// }
+
+// .close-button::before {
+//   -webkit-transform: rotate(45deg);
+//   transform: rotate(45deg);
+// }
+
+// .close-button::after {
+//   -webkit-transform: rotate(-45deg);
+//   transform: rotate(-45deg);
+// }
+
+// .close-button:hover::before,
+// .close-button:hover::after {
+//   background: white_oscuro;
+// }
+
+// SELECTOR IDIOMA
+// ul.language {
+//   display: flex;
+//   li {
+//     &:first-child:after {
+//       content: '-';
+//       display: inline-block;
+//       margin: 0 10px;
+//       color: #77a2a4;
+//     }
+//   }
+//   a,
+//   span {
+//     color: #77a2a4;
+//     text-transform: capitalize;
+//   }
+//   span {
+//     color: white;
+//   }
+// }
+
+// .language__general {
+//   z-index: 9900;
+//   position: fixed;
+//   bottom: 3rem;
+//   left: 2rem;
+
+//   font-size: 3rem;
+//   font-family: sans-serif;
+//   line-height: 1em;
+
+//   @media (min-width: 768px) {
+//     font-size: 5rem;
+//     bottom: 6rem;
+//     left: 4rem;
+//   }
+// }
+
+// selector MENU
+.wpml-ls-legacy-dropdown {
+  margin-left: 4.5rem;
+  width: auto;
+  @media (min-width: 1400px) {
+    margin-left: 7.5rem;
+  }
+
+  @media (max-width: 1199px) {
+    display: none;
+  }
+
+  a {
+    background: transparent !important;
+    color: white;
+    border: 0;
+    font-family: sans-serif;
+  }
+
+  a.wpml-ls-item-toggle {
+    color: white !important;
+    border: none !important;
+    background-color: transparent !important;
+
+    font-family: sans-serif;
+    font-size: 1.7rem;
+    line-height: 1em;
+    &:hover {
+      background-color: transparent !important;
+    }
+    &:after {
+      content: "";
+      border: 0 !important;
+      background-repeat: no-repeat !important;
+      height: 10px;
+      width: 10px;
+      vertical-align: auto;
+      background: url(../assets/img/flecha_blanca.png);
+      margin-top: 3px;
+    }
+  }
+  .wpml-ls-sub-menu {
+    border: 0 !important;
+  }
+}
+
+.shrink .wpml-ls-legacy-dropdown {
+  a {
+    color: black !important;
+  }
+
+  a.wpml-ls-item-toggle {
+    &:after {
+      content: "";
+      border: 0 !important;
+      background-repeat: no-repeat !important;
+      height: 10px;
+      width: 10px;
+      vertical-align: auto;
+      background: url(../assets/img/flecha_negra.png);
+      margin-top: 3px;
+    }
+  }
+
+  .wpml-ls-sub-menu {
+    background: white;
+  }
+}
+
+// MENU MOBILE > wrap
+.menu__wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9000;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.logo_menu_wrap img {
+  width: 5rem !important;
+  margin-left: 5rem;
+  margin-bottom: 6rem;
+
+  @media (min-width: 768px) {
+    width: 10rem !important;
+    margin-left: 15rem;
+    margin-bottom: 10rem;
+  }
+}
+
+// MENU MOBILE > buttons
+.icon-list {
+  text-align: left;
+  margin-left: 5rem;
+
+  @media (min-width: 768px) {
+    margin-left: 15rem;
+  }
+}
+
+.icon-list a,
+.icon-list span {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+
+  font-size: 3rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #7c827a;
+  line-height: 1em;
+
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.icon-list .active a,
+.icon-list a:hover,
+.icon-list a:focus,
+.icon-list ul .current a {
+  color: white;
+}

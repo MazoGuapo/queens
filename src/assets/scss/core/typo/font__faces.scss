@@ -1,0 +1,59 @@
+/******************************/
+/********* FONTFACE ***********/
+/******************************/
+
+// FUENTE PRINCIPAL
+@font-face {
+  font-family: 'Canela';
+  src: url('../font/Canela-LightItalic.woff2') format('woff2'),
+      url('../font/Canela-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela';
+  src: url('../font/Canela-Light.woff2') format('woff2'),
+      url('../font/Canela-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela';
+  src: url('../font/Canela-ThinItalic.woff2') format('woff2'),
+      url('../font/Canela-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela';
+  src: url('../font/Canela-Thin.woff2') format('woff2'),
+      url('../font/Canela-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+// FUENTE SECUNDARIA
+@font-face {
+  font-family: 'GTAmerica';
+  src: url('../font/GTAmerica-Light.woff2') format('woff2'),
+      url('../font/GTAmerica-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GTAmerica';
+  src: url('../font/GTAmerica-Bold.woff2') format('woff2'),
+      url('../font/GTAmerica-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
