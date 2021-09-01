@@ -2,7 +2,7 @@
 /*********** HEADER ***********/
 /******************************/
 
-.header_gracias {
+.header_gracias, .header_legal {
   background-color: transparent !important;
 
   .header_brand {
@@ -10,6 +10,10 @@
     img {
       width: 100%;
     }
+  }
+
+  .menu li a {
+    color: white !important
   }
 }
 

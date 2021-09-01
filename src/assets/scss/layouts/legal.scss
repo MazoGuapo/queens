@@ -1,0 +1,20 @@
+section.module_legal {
+  background-color: #948b82;
+  @extend %paddings_laterales;
+  @extend %paddings_sections;
+
+  .wrapper {
+
+    h1, h2, h3, h4, p {
+      @apply text-white;
+    }
+
+    h2, h3, h4 {
+      @apply font-primary pb-14;
+    }
+
+    p {
+        @apply pb-24;
+    }
+  }
+}
