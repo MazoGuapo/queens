@@ -1,15 +1,33 @@
 .meta_custom {
-    background-color: rgb(97, 95, 109);
-    color: white;
-    border: 1px solid black;
+    background-color: #f7f5d6 !important;
+    border: 1px solid black !important;
   }
 
   .meta_custom .acf-fc-layout-handle {
-    background-color: rgb(69, 67, 78);
-    color: white !important;
+    background-color: #bcb872 !important;
+    color: #747144 !important;
+    font-weight: bold !important;
+    font-size: 24px !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .acf-flexible-content .layout .acf-fc-layout-order {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 30px !important;
+    line-height: 30px !important;
+    margin: 0 10px 0 0 !important;
+    background: #747144 !important;
+    font-size: 19px !important;
+    color: #bcb872 !important;
   }
 
   .acf-fields  {
-    background-color: rgb(192, 189, 209) !important;
-    color: #333;
+    background-color: #f7f5d6 !important;
+    color: #333 !important;
+  }
+
+  .acf-fields.-border {
+    background-color: #efebad !important;
   }
