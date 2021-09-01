@@ -19,7 +19,6 @@ footer {
     width: 100%;
     z-index: 0;
 
-
     img {
       position: relative;
 
@@ -28,7 +27,7 @@ footer {
     }
   }
 
-  .grid {
+  .grid_footer {
     position: relative;
     width: 100%;
     height: 100%;
@@ -55,405 +54,56 @@ footer {
     }
 
     @screen ipadH {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas:
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
         " logo . contact legal"
-        "copy . . social ";
+        "copy copy . social ";
     }
   }
 
   // MENU COLUMNS
   ul.menu {
-    li.titulo {
+    li.title {
     }
 
     li a {
     }
   }
 
-
-  .menu_legal {
-    grid-area: legal;
-
-    justify-self: flex-start;
-    align-self: flex-start;
-
-    padding-top: 3rem;
-
-    @media (min-width: 768px) {
-      padding-top: 0;
-    }
-  }
-
   .grid_logo {
     grid-area: logo;
 
-    justify-self: flex-start;
-    align-self: flex-start;
-    padding-bottom: 4rem;
-
-    @media (min-width: 768px) {
-      justify-self: center;
-      align-self: flex-start;
-      padding-bottom: 0;
-    }
-
     img {
-
-      @media (min-width: 992px) {
-        height: 60%;
-        width: 60%;
-        margin: 0 auto;
-      }
-      @media (min-width: 1200px) {
-        height: 100%;
-        width: 100%;
-      }
+        max-width: 45px;
     }
   }
 
-  .menu_contacto {
-    grid-area: contacto;
+  .grid_contact {
+    grid-area: contact;
 
-    justify-self: flex-start;
-    align-self: flex-start;
-
-    display: flex;
-    flex-direction: column;
-
-    padding-top: 3rem;
-
-    @media (min-width: 768px) {
-      padding-top: 0;
-      justify-self: flex-end;
-      align-self: flex-start;
-    }
-
-    .titulo {
-      font-family: sans-serif;
-      font-weight: 500;
-      font-size: 1.4rem;
-      color: white !important;
-      line-height: 1.2em;
-
-      padding-bottom: 3rem;
-
-      @media (min-width: 768px) {
-        font-size: 1.4rem;
-      }
-      @media (min-width: 992px) {
-        font-size: 1.2rem;
-      }
-      @media (min-width: 1200px) {
-        font-size: 1.4rem;
-      }
-      @media (min-width: 1600px) {
-      }
-
-    }
-
-    a {
-      font-family: sans-serif;
-      font-weight: 400;
-      font-size: 1.6rem;
-      color: white;
-      line-height: 2em;
-
-      @media (min-width: 768px) {
-        font-size: 1.4rem;
-      }
-      @media (min-width: 992px) {
-        font-size: 1.2rem;
-      }
-      @media (min-width: 1200px) {
-        font-size: 1.6rem
-      }
-      @media (min-width: 1600px) {
-      }
-
-    }
-
-    .btn_blanco {
-      border-radius: 0 !important;
-      padding: 1.2rem 1.8rem !important;
-      margin-top: 3rem;
+    .address p {
+      @apply font-primary font-light text-primary text-h4;
     }
   }
 
-  .menu_social {
-    grid-area: social;
-
-    justify-self: flex-start;
-    align-self: flex-start;
-
-    display: flex;
-    flex-direction: column;
-
-    padding-top: 3rem;
-
-    @media (min-width: 768px) {
-      padding-top: 0;
-      justify-self: center;
-      align-self: flex-start;
-    }
-    @media (min-width: 992px) {
-      justify-self: center;
-      align-self: flex-start;
-    }
-    @media (min-width: 1200px) {
-      justify-self: flex-end;
-      align-self: flex-start;
-    }
-    @media (min-width: 1600px) {
-    }
-
-
-    .titulo {
-      font-family: sans-serif;
-      font-weight: 500;
-      font-size: 1.4rem;
-      color: white !important;
-      line-height: 1.2em;
-
-      padding-bottom: 3rem;
-    }
-
-    a {
-      font-family: sans-serif;
-      font-weight: 400;
-      font-size: 1.6rem;
-      color: white;
-      line-height: 2em;
-
-      @media (min-width: 768px) {
-        font-size: 1.4rem;
-      }
-      @media (min-width: 992px) {
-        font-size: 1.2rem;
-      }
-      @media (min-width: 1200px) {
-        font-size: 1.6rem
-      }
-      @media (min-width: 1600px) {
-      }
-    }
+  .grid_legal {
+    grid-area: legal;
   }
+
 
   // MENU COPYRIGHT
-  .copyright {
+  .grid_copyright {
     grid-area: copy;
 
-    padding-top: 6rem;
-
-    display: flex;
-
-    @media (min-width: 768px) {
-      padding-top: 10rem;
-    }
-    @media (min-width: 992px) {
-      padding-top: 12rem;
-    }
-    @media (min-width: 1200px) {
-      padding-top: 15rem;
-    }
-
-    p {
-      font-family: sans-serif;
-      font-weight: 400;
-      font-size: 1.2rem;
-      color: white;
-
-      padding-right: 0.5rem;
-      padding-bottom: 3rem;
-
-      @media (min-width: 768px) {
-        padding-bottom: 6rem;
-      }
-      @media (min-width: 992px) {
-        padding-bottom: 4rem;
-      }
-    }
-
-    a {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
+    justify-self: flex-start;
+    align-self: flex-end;
   }
 
-  // BOTONES GENERALES
-  footer li a {
-    display: block;
-  }
-}
+  .grid_social {
+    grid-area: social;
 
-/******************************/
-/*********** FOOTER ***********/
-/******************************/
-.footer__navigation {
-  width: 100%;
-
-  display: flex;
-  flex-direction: row;
-
-  .footer__navigation__item {
-    position: relative;
-    height: 10rem;
-    background-color: white;
-    width: 50%;
-
-    border-top: 2px solid green_Claro;
-
-    @media (min-width: 768px) {
-
-      height: 20rem;
-    }
-
-    @media (min-width: 992px) {
-      height: 16rem;
-    }
-
-    @media (min-width: 1200px) {
-      height: 21rem;
-    }
-
-    @media (min-width: 1200px) {
-      height: 25rem;
-    }
-
-    &:hover {
-      background-color: #d4d4d4;
-    }
-
-    .footer__navigation__item__contentA {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-end;
-      text-align: right;
-
-      width: 100%;
-      height: 100%;
-      padding: 2.5rem 3rem 2.5rem 0;
-
-      @media (min-width: 768px) {
-        padding: 5.5rem 10rem 5.5rem 0;
-      }
-      @media (min-width: 992px) {
-        padding: 8rem 14rem 8rem 0;
-      }
-      @media (min-width: 1200px) {
-        padding: 6rem 10rem 6rem 0;
-      }
-      @media (min-width: 1600px) {
-        padding: 8rem 14rem 8rem 0;
-      }
-
-      span {
-        font-weight: 400;
-        font-size: 1rem;
-        font-family: sans-serif;
-        color: green;
-
-        @media (min-width: 992px) {
-          font-size: 1.4rem;
-        }
-        @media (min-width: 768px) {
-          font-size: 1.2rem;
-        }
-        @media (min-width: 992px) {
-          font-size: 1rem;
-        }
-        @media (min-width: 1200px) {
-          font-size: 1.4rem;
-        }
-      }
-
-      strong {
-        font-weight: 400;
-        font-size: 2.6rem;
-        font-family: sans-serif;
-        color: green;
-
-        @media (min-width: 768px) {
-          font-size: 4rem;
-        }
-        @media (min-width: 992px) {
-          font-size: 3.5rem;
-        }
-        @media (min-width: 1200px) {
-          font-size: 4rem;
-        }
-        @media (min-width: 1600px) {
-          font-size: 5.2rem;
-        }
-      }
-    }
-
-    .footer__navigation__item__contentB {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      text-align: left;
-
-      width: 100%;
-      height: 100%;
-      padding: 2.5rem 0 2.5rem 3rem;
-
-      @media (min-width: 768px) {
-        padding: 5.5rem 0 5.5rem 10rem;
-      }
-      @media (min-width: 992px) {
-        padding: 8rem 0 8rem 14rem;
-      }
-      @media (min-width: 1200px) {
-        padding: 6rem 0 6rem 10rem;
-      }
-      @media (min-width: 1600px) {
-        padding: 8rem 0 8rem 14rem;
-      }
-
-      span {
-        font-weight: 400;
-        font-size: 1rem;
-        font-family: sans-serif;
-        color: green;
-
-        @media (min-width: 992px) {
-          font-size: 1.4rem;
-        }
-        @media (min-width: 768px) {
-          font-size: 1.2rem;
-        }
-        @media (min-width: 992px) {
-          font-size: 1rem;
-        }
-        @media (min-width: 1200px) {
-          font-size: 1.4rem;
-        }
-      }
-
-      strong {
-        font-weight: 400;
-        font-size: 2.6rem;
-        font-family: sans-serif;
-        color: green;
-
-        @media (min-width: 768px) {
-          font-size: 4rem;
-        }
-        @media (min-width: 992px) {
-          font-size: 3.5rem;
-        }
-        @media (min-width: 1200px) {
-          font-size: 4rem;
-        }
-        @media (min-width: 1600px) {
-          font-size: 5.2rem;
-        }
-      }
-    }
+    justify-self: flex-end;
+    align-self: flex-end;
   }
 }
