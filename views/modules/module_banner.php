@@ -36,13 +36,13 @@
         class="wrapper_content flex flex-col text-center w-2/5">
 
         <?php if($content['sobretitulo']) { ?>
-        <div class="surtitle">
-            <p class=""><?php echo $content['sobretitulo']; ?></p>
+        <div class="surtitle pb-20">
+            <p class="text-white"><?php echo $content['sobretitulo']; ?></p>
         </div>
         <?php } ?>
 
         <?php if($content['titulo']) { ?>
-        <div class="title">
+        <div class="title pb-20">
             <p class="text-<?php echo $content['tamano_titulo']; ?> font-primary font-thin text-white">
                 <?php echo $content['titulo']; ?>
             </p>
@@ -50,14 +50,14 @@
         <?php } ?>
 
         <?php if($content['subtitulo']) { ?>
-        <div class="subtitle">
-            <p class=""><?php echo $content['subtitulo']; ?></p>
+        <div class="subtitle pb-20">
+            <p class="text-white"><?php echo $content['subtitulo']; ?></p>
         </div>
         <?php } ?>
 
         <?php if($content['cuerpo']) { ?>
-        <div class="body">
-            <p class=""><?php echo $content['cuerpo']; ?></p>
+        <div class="body text-white">
+            <?php echo $content['cuerpo']; ?>
         </div>
         <?php } ?>
 
