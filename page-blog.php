@@ -35,11 +35,13 @@ if($posts):
 
             <div class="text-left w-3/5">
                 <div class="fecha pb-10">
-                    <p class="text-h4 text-primary font-thin font-primary italic"><?php echo get_the_date('d/m/Y'); ?></p>
+                    <p class="text-h4 text-primary font-thin font-primary italic"><?php echo get_the_date('d/m/Y'); ?>
+                    </p>
                 </div>
 
                 <div class="titulo pb-10">
-                    <p class="uppercase text-h1 text-primary font-thin font-primary"><?php echo get_the_title($post->ID) ?></p>
+                    <p class="uppercase text-h1 text-primary font-thin font-primary">
+                        <?php echo get_the_title($post->ID) ?></p>
                 </div>
 
                 <a href="<?php echo get_permalink($post->ID) ?>" class="btn_dark_transparent">Leer más</a>
@@ -59,7 +61,13 @@ if($posts):
     </div>
 </section>
 
-<?php if(have_rows('modules')):
+
+
+<?php
+
+wp_reset_postdata();
+
+if(have_rows('modules')):
     while (have_rows('modules')): the_row();
 
         if(get_row_layout() == 'module_form'):

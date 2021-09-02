@@ -13,16 +13,15 @@
 
     <div class="wrapper_content flex flex-col text-center w-2/5">
 
-        <div class="surtitle pb-10">
-            <p class="text-white"><?php echo get_the_date('d/m/Y'); ?></p>
+        <div class="surtitle pb-14 ">
+            <p class="text-white font-primary  italic"><?php echo get_the_date('d/m/Y'); ?></p>
         </div>
 
-        <div class="title pb-10">
+        <div class="title pb-14 uppercase">
             <p class="text-h1 font-primary font-thin text-white">
                 <?php the_title(); ?>
             </p>
         </div>
-
 
         <div class="buttons">
             <a class="btn" href="">Seguir Leyendo</a>
@@ -42,17 +41,17 @@
 </section>
 
 <!-- SINGLE -->
-<section class="module module_blog_single">
+<section class="module module_blog_single bg-secondary">
     <div class="module_blog_single_wrap">
 
         <!-- META -->
-        <div class="wrapper">
-            <span class="fecha"><?php echo get_the_date('d/m/Y'); ?></span>
+        <div class="wrapper pb-14">
+            <p class="text-primary font-primary italic"><?php echo get_the_date('d/m/Y'); ?></p>
         </div>
 
         <!-- SINGLE -->
-        <div class="titulo">
-            <p><?php the_title(); ?></p>
+        <div class="titulo pb-14 uppercase">
+            <p class="text-h1 font-primary font-thin text-primary"><?php the_title(); ?></p>
         </div>
 
         <!-- CONTENT -->
@@ -64,4 +63,19 @@
 
 </section>
 
-<?php get_footer(); ?>
+<?php
+
+wp_reset_postdata();
+
+if(have_rows('modules')):
+    while (have_rows('modules')): the_row();
+
+        if(get_row_layout() == 'module_form'):
+            require('views/modules/module_form.php');
+
+        endif;
+
+    endwhile;
+endif;
+
+get_footer(); ?>
