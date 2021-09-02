@@ -23,6 +23,7 @@
             </p>
         </div>
 
+
         <div class="buttons">
             <a class="btn" href="">Seguir Leyendo</a>
         </div>
