@@ -51,7 +51,22 @@
 	const $ = jQuery = __webpack_require__(1);
 	// const Swiper = require('swiper');
 
-	console.log('pedrito');
+	// /*****************************************/
+	// /******** LOADING PACE FIRST TIME ********/
+	// /*****************************************/\
+
+	Pace.once('hide', function(){
+	  // INICIO
+	  inicio();
+	  console.log('pepito')
+	});
+
+
+
+
+
+
+
 
 
 
