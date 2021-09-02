@@ -1,0 +1,17 @@
+.module_blog {
+    @extend %paddings_laterales;
+    padding-top: 170px;
+}
+
+.module_blog_grid {
+    @extend %paddings_laterales;
+    padding-bottom: 170px;
+
+    .alm-reveal {
+        padding-top: 100px;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-flow: row;
+    }
+}

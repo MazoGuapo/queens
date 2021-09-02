@@ -60,10 +60,12 @@ const swiper2 = new Swiper('.swiper-carousel', {
 altura_viewport();
 // MENU
 menu();
-// // FORMULARIOS ENRIQUECIDOS
-// formularios();
-// // SCROLL INICIAL
-// shrink_body();
+// FORMULARIOS ENRIQUECIDOS
+formularios();
+// SCROLL INICIAL
+shrink_body();
+
+
 // // REEMPLAZAR IMG POR SVG
 // // svg_replace();
 // // TITULOS ANIMADOS > SPAN
@@ -201,44 +203,44 @@ function inicio() {
 //   });
 // }
 
-// /*****************************************/
-// /*** FUNCION FORMULARIOS ENRIQUECIDOS ****/
-// /*****************************************/
+/*****************************************/
+/*** FUNCION FORMULARIOS ENRIQUECIDOS ****/
+/*****************************************/
 
-// function formularios() {
-//    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-//    if (!String.prototype.trim) {
-//     (function() {
-//       // Make sure we trim BOM and NBSP
-//       var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-//       String.prototype.trim = function() {
-//         return this.replace(rtrim, '');
-//       };
-//     })();
-//   }
+function formularios() {
+   // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+   if (!String.prototype.trim) {
+    (function() {
+      // Make sure we trim BOM and NBSP
+      var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+      String.prototype.trim = function() {
+        return this.replace(rtrim, '');
+      };
+    })();
+  }
 
-//   [].slice.call( document.querySelectorAll( '.input__field' ) ).forEach( function( inputEl ) {
-//     // in case the input is already filled..
-//     if( inputEl.value.trim() !== '' ) {
-//       classie.add( inputEl.parentNode.parentNode, 'input--filled' );
-//     }
+  [].slice.call( document.querySelectorAll( '.input__field' ) ).forEach( function( inputEl ) {
+    // in case the input is already filled..
+    if( inputEl.value.trim() !== '' ) {
+      classie.add( inputEl.parentNode.parentNode, 'input--filled' );
+    }
 
-//     // events:
-//     inputEl.addEventListener( 'focus', onInputFocus );
-//     inputEl.addEventListener( 'blur', onInputBlur );
+    // events:
+    inputEl.addEventListener( 'focus', onInputFocus );
+    inputEl.addEventListener( 'blur', onInputBlur );
 
-//   } );
+  } );
 
-//   function onInputFocus( ev ) {
-//     classie.add( ev.target.parentNode.parentNode, 'input--filled' );
-//   }
+  function onInputFocus( ev ) {
+    classie.add( ev.target.parentNode.parentNode, 'input--filled' );
+  }
 
-//   function onInputBlur( ev ) {
-//     if( ev.target.value.trim() === '' ) {
-//       classie.remove( ev.target.parentNode.parentNode, 'input--filled' );
-//     }
-//   }
-// }
+  function onInputBlur( ev ) {
+    if( ev.target.value.trim() === '' ) {
+      classie.remove( ev.target.parentNode.parentNode, 'input--filled' );
+    }
+  }
+}
 
 /*****************************************/
 /********* FUNCION SHRINK BODY ***********/
@@ -516,10 +518,10 @@ if( jQuery(".button_lg_iframe").length > 0 ) {
 
 function grid_gallery(){
   // BUTTON OPEN
-  jQuery(document).on('click', '.button_lg', function (event) {    
+  jQuery(document).on('click', '.button_lg', function (event) {
     event.preventDefault();
     var grid = jQuery(this).data('gallery');
     console.log(grid);
     jQuery("#"+grid+" .gallery_lg_item:first-child").trigger("click");
-  });  
+  });
 }
