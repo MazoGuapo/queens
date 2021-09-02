@@ -10,12 +10,18 @@
 <body <?php body_class(); ?>>
 
     <?php
-
 	// GET MENU
 	$menu_items = wp_get_nav_menu_items('Header');
     $header = get_field('header', 'options');
     $link_dossier = $header['enlace_dossier'];
 	?>
+
+    <!-- LOADING -->
+    <div class="cargador">
+    	<div class="brand">
+    		<img src="<?php bloginfo( 'template_url' ); ?>/src/assets/images/loading_brand.png" class="img-fluid">
+    	</div>
+    </div> 
 
     <!-- MENU MOBILE -->
     <div class="menu__wrap">

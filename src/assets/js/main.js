@@ -5,7 +5,22 @@
 const $ = jQuery = require('jquery');
 // const Swiper = require('swiper');
 
-console.log('pedrito');
+// /*****************************************/
+// /******** LOADING PACE FIRST TIME ********/
+// /*****************************************/\
+
+Pace.once('hide', function(){
+  // INICIO
+  inicio();
+  console.log('pepito')
+});
+
+
+
+
+
+
+
 
 
 
