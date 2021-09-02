@@ -24,7 +24,10 @@ if(have_rows('modules')):
             require('views/modules/module_before_after.php');
 
         elseif(get_row_layout() == 'module_gallery'):
-            require('views/modules/module_gallery.php');        
+            require('views/modules/module_gallery.php');
+
+        elseif(get_row_layout() == 'module_maps'):
+            require('views/modules/module_maps.php');
 
         endif;
 

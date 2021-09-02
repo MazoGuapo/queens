@@ -1,27 +1,14 @@
 // BOTONES STANDAR
 .btn {
   @include botones;
-  border: 1px solid green;
-  color: green;
+  border: 1px solid white;
+  color: white;
   display: inline-block;
-  position: relative;
-  // &:before {
-  //   position: absolute;
 
-  //   z-index: -1;
-  //   top: 0;
-  //   left: 0;
-  //   content: '';
-  //   display: block;
-  //   height: 100%;
-  //   background: black;
-  //   width: 0;
-  //   @include animaciones(0.3s);
-  // }
   &:hover {
-    background-color: green;
-    color: green_Claro;
-    border: 1px solid green_Claro;
+    background-color: lightgray;
+    color: white;
+    border: 1px solid white;
     &:before {
       width: 100%;
     }

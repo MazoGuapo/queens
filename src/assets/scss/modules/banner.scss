@@ -1,6 +1,7 @@
 section.module {
   &_banner {
     position: relative;
+
     // IMAGEN FONDO
     .background {
       position: absolute;
@@ -35,6 +36,10 @@ section.module {
       .title {
         display: flex;
         justify-content: center;
+      }
+
+      .body p {
+        @apply text-white;
       }
     }
 
