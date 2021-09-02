@@ -3,10 +3,46 @@
 /*****************************************/
 
 const $ = jQuery = require('jquery');
-const Swiper = require('swiper');
+// const Swiper = require('swiper');
+
+console.log('pedrito');
+
+
+
+const swiper = new Swiper('.swiper-gallery', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  freeMode: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+const swiper2 = new Swiper('.swiper-carousel', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  freeMode: {
+    enabled: true,
+    sticky: true,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
 // ALTURA VIEWPORT
-altura_viewport ();
+altura_viewport();
 // MENU
 menu();
 // // FORMULARIOS ENRIQUECIDOS
@@ -100,15 +136,15 @@ function inicio() {
 
   // LOADING HIDE
   setTimeout(
-    function(){
+    function () {
 
       // CAROUSEL
-      if ( jQuery('.modelCarousel').length ) { project_carousel(); }
+      if (jQuery('.modelCarousel').length) { project_carousel(); }
       // WAYPOINTS
-      if ( jQuery('section').length ) { animate_sections(); }
-      if ( jQuery('.animated_text').length ) { animate_text(); }
-      if ( jQuery('.carrusel__background').length ) { home_carousel(); }
-    },500
+      if (jQuery('section').length) { animate_sections(); }
+      if (jQuery('.animated_text').length) { animate_text(); }
+      if (jQuery('.carrusel__background').length) { home_carousel(); }
+    }, 500
   );
 }
 
@@ -195,7 +231,7 @@ function inicio() {
 function shrink_body() {
   var offset = 150;
   var duration = 300;
-  jQuery(window).scroll(function() {
+  jQuery(window).scroll(function () {
     if (jQuery(this).scrollTop() > offset) {
       jQuery('body').addClass('shrink');
       jQuery('.header__shadow').fadeIn();
@@ -214,14 +250,14 @@ function shrink_body() {
 /***** MENU ****/
 /***************/
 
-function menu (){
+function menu() {
 
   var bodyEl = document.body,
-    content = document.querySelector( '#wrap' ),
-    openbtn = document.getElementById( 'open-button' ),
-    closebtn = document.getElementById( 'close-button' ),
-    botones = document.querySelectorAll ( '.sidebar a' ),
-    botones2 = document.querySelectorAll ( '.menu__wrap .boton'),
+    content = document.querySelector('#wrap'),
+    openbtn = document.getElementById('open-button'),
+    closebtn = document.getElementById('close-button'),
+    botones = document.querySelectorAll('.sidebar a'),
+    botones2 = document.querySelectorAll('.menu__wrap .boton'),
     isOpen = false;
 
   function init() {
@@ -229,24 +265,24 @@ function menu (){
   }
 
   function initEvents() {
-    openbtn.addEventListener( 'click', toggleMenu );
-    if( closebtn ) {
-      closebtn.addEventListener( 'click', toggleMenu );
+    openbtn.addEventListener('click', toggleMenu);
+    if (closebtn) {
+      closebtn.addEventListener('click', toggleMenu);
     }
 
-    botones.forEach(function(element) {
-      element.addEventListener( 'click', toggleMenu );
+    botones.forEach(function (element) {
+      element.addEventListener('click', toggleMenu);
     })
 
-    botones2.forEach(function(element) {
-      element.addEventListener( 'click', toggleMenu );
+    botones2.forEach(function (element) {
+      element.addEventListener('click', toggleMenu);
     })
 
     // close the menu element if the target it´s not the menu element or one of its descendants..
 
-    content.addEventListener( 'click', function(ev) {
+    content.addEventListener('click', function (ev) {
       var target = ev.target;
-      if( isOpen && target !== openbtn ) {
+      if (isOpen && target !== openbtn) {
         toggleMenu();
       }
     });
@@ -254,7 +290,7 @@ function menu (){
   }
 
   function toggleMenu() {
-    if( isOpen ) {
+    if (isOpen) {
       jQuery('.menu__wrap').fadeOut('');
       jQuery('.close-button').fadeOut('');
     } else {
@@ -422,3 +458,53 @@ function menu (){
 //     });
 //   });
 // }
+
+// BEFORE & AFTER
+const slider = document.querySelector(".slider input");
+const img = document.querySelector(".images .img-2");
+const dragLine = document.querySelector(".slider .drag-line");
+slider.oninput = ()=>{
+  let sliderVal = slider.value;
+  let right = 100 - sliderVal;
+  dragLine.style.right = right + "%";
+  img.style.width = right + "%";
+}
+
+
+/************************/
+/** GRID  LIGHTGALLERY **/
+/************************/
+
+grid_gallery();
+
+if( jQuery(".gallery_lg").length > 0 ) {
+  var elements = document.getElementsByClassName('gallery_lg');
+  for (let item of elements) {
+      lightGallery(item, {
+          counter: false,
+          download: false,
+          selector: '.gallery_lg_item',
+          licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
+      })
+  }
+}
+
+if( jQuery(".button_lg_iframe").length > 0 ) {
+  var elements = document.getElementsByClassName('button_lg_iframe');
+  for (let item of elements) {
+      lightGallery(item, {
+        selector: 'this',
+      })
+  }
+}
+
+
+function grid_gallery(){
+  // BUTTON OPEN
+  jQuery(document).on('click', '.button_lg', function (event) {    
+    event.preventDefault();
+    var grid = jQuery(this).data('gallery');
+    console.log(grid);
+    jQuery("#"+grid+" .gallery_lg_item:first-child").trigger("click");
+  });  
+}

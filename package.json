@@ -12,6 +12,7 @@
   "dependencies": {
     "autoprefixer": "latest",
     "google-maps": "latest",
+    "image-compare-viewer": "^1.4.1",
     "jquery-ui": "latest",
     "lightgallery": "latest",
     "locomotive-scroll": "latest",
