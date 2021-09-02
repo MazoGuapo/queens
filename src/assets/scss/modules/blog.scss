@@ -5,7 +5,6 @@
 
 .module_blog_grid {
     @extend %paddings_laterales;
-    padding-bottom: 170px;
 
     .alm-reveal {
         padding-top: 100px;
@@ -13,5 +12,14 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-auto-flow: row;
+    }
+}
+
+.module_blog_single {
+    @extend %paddings_laterales;
+    @extend %paddings_sections;
+
+    .content {
+        @apply font-light text-primary;
     }
 }
