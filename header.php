@@ -13,15 +13,17 @@
 
 	// GET MENU
 	$menu_items = wp_get_nav_menu_items('Header');
+    $header = get_field('header', 'options');
+    $link_dossier = $header['enlace_dossier'];
 	?>
 
     <!-- MENU MOBILE -->
-    <div class="menu__wrap"
-        style="background: url(<?php bloginfo('template_url')?>/assets/img/fondo_menu_wrap.jpg) no-repeat center center fixed;">
+    <div class="menu__wrap">
 
         <!-- MENU MOBILE > BRAND -->
         <div class="menu__brand logo_menu_wrap">
-            <img src="<?php bloginfo('template_url') ?>/assets/img/logo_menu_wrap.png">
+            <img class="hidden ipad:block" src="<?php bloginfo('template_url') ?>/src/assets/images/logo_menu_wrap.png">
+            <img class="ipad:hidden block" src="<?php bloginfo('template_url') ?>/src/assets/images/logo_menu_wrap_mobile.png">
         </div>
 
         <!-- MENU MOBILE > MENU -->
@@ -30,17 +32,13 @@
                 <ul>
                     <?php foreach( $menu_items as $menu_item ) {
 					$link = $menu_item->url;
-					$title = $menu_item->title;
-					$actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-					if( $actual_link == $link):
-						$clase = 'current';
-					else:
-						$clase= '';
-					endif;
-					?>
-                    <li class="<?php echo $clase; ?>">
+					$title = $menu_item->title;?>
+
+                    <li class="pb-5">
                         <a href="<?php echo $link; ?>">
-                            <?php echo $title; ?>
+                            <p class="font-primary ipad:text-h3 text-h4 font-light text-primary">
+                                <?php echo $title; ?>
+                            </p>
                         </a>
                     </li>
                     <?php } ?>
@@ -49,7 +47,11 @@
         </nav>
 
         <!-- MENU MOBILE > CLOSE -->
-        <button class="close-button" id="close-button">Close Menu</button>
+        <button class="close-button font-secondary font-light text-h7 text-primary" id="close-button">Cerrar</button>
+
+        <a class="dossier_button btn_dark" href="<?php echo $link_dossier; ?>">
+            Descargar dossier
+        </a>
 
     </div>
 
