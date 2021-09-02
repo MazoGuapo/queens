@@ -2,7 +2,8 @@
 /*********** HEADER ***********/
 /******************************/
 
-.header_gracias, .header_legal {
+.header_gracias,
+.header_legal {
   background-color: transparent !important;
 
   .header_brand {
@@ -13,7 +14,7 @@
   }
 
   .menu li a {
-    color: white !important
+    color: white !important;
   }
 }
 
@@ -158,7 +159,7 @@ header ul.menu li.current a:after {
 .menu-button span {
   width: 100%;
   height: 2px;
-  background: #645E58;
+  background: #645e58;
   display: block;
 
   &:nth-child(2) {
@@ -179,64 +180,7 @@ header ul.menu li.current a:after {
   background-color: white;
 }
 
-// CLOSE MENU
-// .close-button {
-//   display: none;
-//   position: absolute;
-//   width: 36px;
-//   height: 30px;
-//   overflow: hidden;
-//   border: none;
-//   background: transparent;
-//   text-indent: 1em;
-//   font-size: 1em;
-//   color: transparent;
-//   cursor: pointer;
 
-//   right: 1.4rem;
-//   top: 2rem;
-
-//   @media (min-width: 768px) {
-//     right: 10rem;
-//     top: 4.5rem;
-//   }
-
-//   @media (min-width: 992px) {
-//     right: 4rem;
-//     top: 3.5rem;
-//   }
-
-//   &:focus {
-//     outline: none;
-//   }
-// }
-
-// .close-button::before,
-// .close-button::after {
-//   content: "";
-//   position: absolute;
-//   width: 2px;
-//   height: 100%;
-//   top: 0;
-//   left: 50%;
-//   background: white;
-
-// }
-
-// .close-button::before {
-//   -webkit-transform: rotate(45deg);
-//   transform: rotate(45deg);
-// }
-
-// .close-button::after {
-//   -webkit-transform: rotate(-45deg);
-//   transform: rotate(-45deg);
-// }
-
-// .close-button:hover::before,
-// .close-button:hover::after {
-//   background: white_oscuro;
-// }
 
 // SELECTOR IDIOMA
 // ul.language {
@@ -354,62 +298,79 @@ header ul.menu li.current a:after {
   width: 100%;
   height: 100vh;
 
+  background-color: #cec7bc;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  align-items: center;
+  text-align: center;
 }
 
-.logo_menu_wrap img {
-  width: 5rem !important;
-  margin-left: 5rem;
-  margin-bottom: 6rem;
+.logo_menu_wrap {
+  position: absolute;
+  overflow: hidden;
+
+  left: 2rem;
+  top: 3rem;
 
   @media (min-width: 768px) {
-    width: 10rem !important;
-    margin-left: 15rem;
-    margin-bottom: 10rem;
+    left: 5rem;
+    top: 5rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    width: 100%;
   }
 }
 
 // MENU MOBILE > buttons
 .icon-list {
-  text-align: left;
-  margin-left: 5rem;
-
-  @media (min-width: 768px) {
-    margin-left: 15rem;
-  }
+  text-align: center;
 }
 
-.icon-list a,
-.icon-list span {
-  display: inline-block;
-  margin-bottom: 2.5rem;
-
-  font-size: 3rem;
-  font-family: sans-serif;
-  font-weight: 400;
-  color: #7c827a;
-  line-height: 1em;
-
-  display: flex;
-  align-items: center;
-
-  @media (min-width: 768px) {
-    font-size: 5rem;
-    margin-bottom: 4rem;
-  }
-}
-
-.icon-list .active a,
-.icon-list a:hover,
-.icon-list a:focus,
-.icon-list ul .current a {
+.icon-list .active a p,
+.icon-list a:hover p,
+.icon-list a:focus p,
+.icon-list ul .current a p {
   color: white;
+}
+
+// CLOSE MENU
+.close-button {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+
+  right: 2rem;
+  top: 3rem;
+
+  @media (min-width: 768px) {
+    right: 5rem;
+    top: 5rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+//BOTON DESCARGA DOSSIER
+.dossier_button {
+  position: absolute;
+  left: 50%;
+  bottom: 12rem;
+  transform: translateX(-50%);
+
+  @media (min-width: 768px) {
+    left: 50%;
+    bottom: 12rem;
+    transform: translateX(-50%);
+  }
 }
