@@ -91,10 +91,12 @@
 	altura_viewport();
 	// MENU
 	menu();
-	// // FORMULARIOS ENRIQUECIDOS
-	// formularios();
-	// // SCROLL INICIAL
-	// shrink_body();
+	// FORMULARIOS ENRIQUECIDOS
+	formularios();
+	// SCROLL INICIAL
+	shrink_body();
+
+
 	// // REEMPLAZAR IMG POR SVG
 	// // svg_replace();
 	// // TITULOS ANIMADOS > SPAN

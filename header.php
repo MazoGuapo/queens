@@ -36,7 +36,7 @@
 
                     <li class="pb-5">
                         <a href="<?php echo $link; ?>">
-                            <p class="font-primary ipad:text-h3 text-h4 font-light text-primary">
+                            <p class="font-primary ipad:text-h3 text-h4 font-light">
                                 <?php echo $title; ?>
                             </p>
                         </a>

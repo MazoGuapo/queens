@@ -15,6 +15,22 @@
   }
 }
 
+.btn_dark_transparent {
+  @include botones;
+  border: 1px solid #645E58;
+  color: #645E58;
+  display: inline-block;
+
+  &:hover {
+    background-color: lightgray;
+    color: white;
+    border: 1px solid white;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
 .btn_dark {
   @include botones;
   color: #FBF8EF ;
