@@ -7,41 +7,60 @@
     $alineacion = get_sub_field('alineacion_2col');
     $align_type = $alineacion['alineacion_tipo'];
     $full_height = $options['full_height'];
+    $decoration = get_sub_field('decoration');
+
+    unset($output_imagen);
+    unset($output_bottom);
+
+    // DECORATION
+    if( $decoration['activado'][0] == 'on'):
+        if($decoration['tipo'] == 'imagen'):
+            $output_imagen .= '<div class="decoration decoration_image"><img src="'.$decoration['imagen']['sizes']['theme_full'].'"></div>';
+        endif;   
+        if($decoration['tipo'] == 'bottom'):
+            $output_bottom .= '<div class="decoration"><img src="'.$decoration['imagen']['sizes']['theme_full'].'"></div>';
+        endif;       
+    endif;   
+
 ?>
 
-<section class="module module-<?php echo $layout['lateral_paddings']; ?> module_two_columns h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color_2col']; ?>">
+<section class="module module-<?php echo $layout['lateral_paddings']; ?> module_two_columns min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color_2col']; ?>">
 
     <div class="wrapper flex flex-row ipadH:flex-<?php echo $flex_dir; ?> ">
 
-        <div class="wrapper_image w-2/4">
+        <div class="wrapper_image">
+
+            <?php echo $output_imagen; ?>
 
             <?php if($media['imagen_2col']) { ?>
-            <img src="<?php echo $media['imagen_2col']['sizes']['theme_full'] ?>" alt="">
+                <img src="<?php echo $media['imagen_2col']['sizes']['theme_full'] ?>" alt="">
             <?php } ?>
 
             <?php if($media['video_2col']) { ?>
-            <video src="<?php echo $media['video_2col'] ?>" autoplay="true" loop="true" muted="true"></video>
+                <video src="<?php echo $media['video_2col'] ?>" autoplay="true" loop="true" muted="true"></video>
             <?php } ?>
 
             <?php if($media['carrusel_2col']) {
-            $images = $media['carrusel_2col'];
-            ?>
-            <div class="carousel">
-                <?php foreach($images as $image) { ?>
-                <img src="<?php echo $image['sizes']['theme_full']; ?>">
-                <?php } ?>
-            </div>
+                $images = $media['carrusel_2col'];  ?>
+                <div class="carousel">
+                    <?php foreach($images as $image) { ?>
+                    <img src="<?php echo $image['sizes']['theme_full']; ?>">
+                    <?php } ?>
+                </div>
             <?php } ?>
 
-        </div>
+            <div class="w-full text-right mt-5 ">
+                <p class="text-h6">San Sebastián de los Reyes se encuentra a unos pasos del nudo norte de Madrid</p>
+            </div>
 
+        </div>
 
         <div class="wrapper_content w-2/4 flex flex-col <?php echo $alineacion; ?>">
 
             <?php if($content['sobretitulo']) { ?>
-            <div class="surtitle w-full mb-20 transition">
-                <p class="text-primary italic"><?php echo $content['sobretitulo']; ?></p>
-            </div>
+                <div class="surtitle w-full mb-20 transition">
+                    <p class="text-primary italic"><?php echo $content['sobretitulo']; ?></p>
+                </div>
             <?php } ?>
 
             <?php if($content['titulo']) { ?>
@@ -100,6 +119,8 @@
 
             </div>
             <?php } ?>
+
+            <?php echo $output_bottom; ?>
 
         </div>
 
