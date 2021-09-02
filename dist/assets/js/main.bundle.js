@@ -47,18 +47,55 @@
 	/*****************************************/
 	/*********** FUNCIONES BASE **************/
 	/*****************************************/
-
 	const $ = jQuery = __webpack_require__(1);
 	// const Swiper = require('swiper');
 
-	// /*****************************************/
-	// /******** LOADING PACE FIRST TIME ********/
-	// /*****************************************/\
+	/*****************************************/
+	/******** LOADING PACE FIRST TIME ********/
+	/*****************************************/
 
 	Pace.once('hide', function(){
 	  // INICIO
 	  inicio();
 	  console.log('pepito')
+	});
+
+	/*****************************************/
+	/*********** FUNCIONES INICIO ************/
+	/*****************************************/
+	function inicio() {
+
+	  // HIDE CARGADOR
+	  jQuery('body').addClass('loaded');
+	  setTimeout(
+	    function(){
+	      jQuery('.cargador').css('display','none');
+	  }, 500); 
+
+	  // LOADING HIDE
+	  setTimeout(
+	    function () {
+
+	      // CAROUSEL
+	      // if (jQuery('.modelCarousel').length) { project_carousel(); }
+
+	    }, 500
+	  );
+	}
+
+
+	const swiper = new Swiper('.swiper-banner', {
+	  // Optional parameters
+	  direction: 'horizontal',
+	  loop: true,
+	  slidesPerView: '1',
+	  spaceBetween: 0,
+	  autoplay: true,
+	  speed: 800,
+	  // If we need pagination
+	  pagination: {
+	    el: '.swiper-pagination',
+	  },
 	});
 
 
@@ -70,7 +107,7 @@
 
 
 
-	const swiper = new Swiper('.swiper-gallery', {
+	const swiper2 = new Swiper('.swiper-gallery', {
 	  // Optional parameters
 	  direction: 'horizontal',
 	  loop: false,
@@ -85,7 +122,7 @@
 	});
 
 
-	const swiper2 = new Swiper('.swiper-carousel', {
+	const swiper3 = new Swiper('.swiper-carousel', {
 	  // Optional parameters
 	  direction: 'horizontal',
 	  loop: false,
@@ -188,28 +225,31 @@
 	//   console.log('pepito')
 	// });
 
-	/*****************************************/
-	/*********** FUNCIONES INICIO ************/
-	/*****************************************/
-	function inicio() {
+	// /*****************************************/
+	// /*********** FUNCIONES INICIO ************/
+	// /*****************************************/
+	// function inicio() {
 
-	  // HIDE CARGADOR
-	  jQuery('body').addClass('loaded');
+	//   // HIDE CARGADOR
+	//   jQuery('body').addClass('loaded');
+	//   setTimeout(
+	//     function(){
+	//       jQuery('.cargador').css('display','none');
+	//   }, 500); 
 
+	//   // LOADING HIDE
+	//   setTimeout(
+	//     function () {
 
-	  // LOADING HIDE
-	  setTimeout(
-	    function () {
-
-	      // CAROUSEL
-	      if (jQuery('.modelCarousel').length) { project_carousel(); }
-	      // WAYPOINTS
-	      if (jQuery('section').length) { animate_sections(); }
-	      if (jQuery('.animated_text').length) { animate_text(); }
-	      if (jQuery('.carrusel__background').length) { home_carousel(); }
-	    }, 500
-	  );
-	}
+	//       // CAROUSEL
+	//       // if (jQuery('.modelCarousel').length) { project_carousel(); }
+	//       // WAYPOINTS
+	//       // if (jQuery('section').length) { animate_sections(); }
+	//       // if (jQuery('.animated_text').length) { animate_text(); }
+	//       // if (jQuery('.carrusel__background').length) { home_carousel(); }
+	//     }, 500
+	//   );
+	// }
 
 
 	// /*****************************************/
@@ -557,6 +597,7 @@
 	  for (let item of elements) {
 	      lightGallery(item, {
 	        selector: 'this',
+	        licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
 	      })
 	  }
 	}

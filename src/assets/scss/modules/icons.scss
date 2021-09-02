@@ -16,5 +16,10 @@ section.module_icons {
           margin-left: 15px;
         }
       }
+
+      .body p {
+        @apply text-white;
+      }
+      
     }
   }

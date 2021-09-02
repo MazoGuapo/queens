@@ -35,4 +35,4 @@
 		</ul>
 	</div>
 
-</div>
+</section>

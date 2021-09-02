@@ -55,5 +55,9 @@ section.module {
         font-weight: 700;
       }
     }
+
+    .buttons {
+      @apply w-auto;
+    }
   }
 }

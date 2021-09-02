@@ -23,7 +23,7 @@ require_once('library/lightgallery2/lightgallery.php');
 // // require_once('library/simplebar/simplebar.php');
 // // require_once('library/countup/countup.php'); 
 require_once('library/swiper/swiper.php'); 
-require_once('library/image-compare/image-compare.php');
+// require_once('library/image-compare/image-compare.php');
 
 include("functions/filters.php");
 

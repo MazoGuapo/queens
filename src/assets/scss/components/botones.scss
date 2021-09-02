@@ -1,4 +1,7 @@
-// BOTONES STANDAR
+/******************************/
+/********** BOTONES ***********/
+/******************************/
+
 .btn {
   @include botones;
   border: 1px solid white;
@@ -38,3 +41,8 @@
   display: inline-block;
 }
 
+.link {
+  display: flex;
+  align-items: center;
+  @apply text-white;
+}
