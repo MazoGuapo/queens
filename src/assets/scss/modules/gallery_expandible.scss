@@ -1,0 +1,58 @@
+.module-gallery-expand {
+    position: relative;
+    display: flex;
+    flex-direction: column;   
+    height:  100vh; 
+    padding-bottom: 49px;
+    @media (min-width: 992px) {
+        flex-direction: row;
+    }
+}
+
+// TARJETA 
+.module-gallery-expand-item {
+    position: relative;
+    height: 33.3%;    
+    //flex-direction: column;
+    -webkit-transition                          : .8s ease;
+    -moz-transition                             : .8s ease;
+    -o-transition                               : .8s ease;
+    transition                                  : .8s ease;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @media (min-width: 992px) {
+        //flex-direction: column;
+        height: 100%;
+        flex: 33%; 
+    }
+    @media (min-width: 1200px) {
+        &:hover {
+            flex: 50%;
+        } 
+    }
+
+    // CAPA OSCURA
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+
+    // IMAGENES
+    > img {
+        position: absolute;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }    
+}

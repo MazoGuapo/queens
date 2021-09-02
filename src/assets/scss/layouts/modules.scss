@@ -11,4 +11,8 @@
         @extend %paddings_sections;
     }
 
+    &-width {
+        @extend %paddings_laterales;
+    }
+
 }
