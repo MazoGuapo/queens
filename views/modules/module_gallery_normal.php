@@ -4,10 +4,10 @@
 ?>
 
 <div class="module-full module-gallery-normal">
-    
+
     <!-- INTRO -->
     <div class="module-width mb-40">
-        <div class="grid grid-cols-2 gap-96 items-<?php echo $normal['alineacion_intro'] ?>">
+        <div class="grid ipad:grid-cols-2 gap-96 items-<?php echo $normal['alineacion_intro'] ?>">
             <!-- titulo -->
             <div class="font-primary text-<?php echo $normal['tamano_titulo'] ?> text-primary flex items-center">
                 <?php if($normal['icono']): ?><img src="<?php echo $normal['icono'] ?>" alt="" class="mr-4"><?php endif; ?>
@@ -81,7 +81,7 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-        
-    <?php endif; ?> 
+
+    <?php endif; ?>
 
 </div>
