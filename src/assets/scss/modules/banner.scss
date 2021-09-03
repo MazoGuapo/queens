@@ -1,6 +1,7 @@
 section.module {
   &_banner {
     position: relative;
+    @extend %paddings_laterales;
 
     // IMAGEN FONDO
     .background {
@@ -11,6 +12,13 @@ section.module {
       width: 100%;
       z-index: 0;
       overflow: hidden;
+
+      img, video, .swiper {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
 
       // CAPA OSCURA
       &:before {

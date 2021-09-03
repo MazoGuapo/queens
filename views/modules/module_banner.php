@@ -44,7 +44,7 @@
     </div>
 
     <!-- CONTENIDOS -->
-    <div class="wrapper_content flex flex-col items-center text-center w-2/5">
+    <div class="wrapper_content flex flex-col items-center text-center ipadH:w-2/5 w-full">
 
         <!-- sobretitulo -->
         <?php if($content['sobretitulo']) { ?>
@@ -56,7 +56,7 @@
         <!-- titulo -->
         <?php if($content['titulo']) { ?>
             <div class="title pb-10">
-                <p class="text-<?php echo $content['tamano_titulo']; ?> font-primary font-thin text-white">
+                <p class="ipad:text-<?php echo $content['tamano_titulo']; ?> text-h2 font-primary font-thin text-white">
                     <?php echo $content['titulo']; ?>
                 </p>
             </div>
@@ -115,12 +115,12 @@
         <?php } ?>
 
     </div>
-    
+
     <!-- BANNER SCROLL -->
     <?php if($options['scroll_check'] == 'active') { ?>
         <div class="banner_scroll">
             <div class="b-text">scroll</div>
-            <div class="b-scrolldown">			
+            <div class="b-scrolldown">
                 <div class="b-line"></div>
             </div>
         </div>
