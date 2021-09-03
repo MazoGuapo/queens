@@ -543,14 +543,16 @@ function menu() {
 // }
 
 // BEFORE & AFTER
-const slider = document.querySelector(".slider input");
-const img = document.querySelector(".images .img-2");
-const dragLine = document.querySelector(".slider .drag-line");
-slider.oninput = ()=>{
-  let sliderVal = slider.value;
-  let right = 100 - sliderVal;
-  dragLine.style.right = right + "%";
-  img.style.width = right + "%";
+if( jQuery(".slider").length > 0 ) {
+  const slider = document.querySelector(".slider input");
+  const img = document.querySelector(".images .img-2");
+  const dragLine = document.querySelector(".slider .drag-line");
+  slider.oninput = ()=>{
+    let sliderVal = slider.value;
+    let right = 100 - sliderVal;
+    dragLine.style.right = right + "%";
+    img.style.width = right + "%";
+  }
 }
 
 /************************/
