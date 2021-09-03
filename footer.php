@@ -15,11 +15,11 @@
         <img src="<?php bloginfo('template_url')?>/src/assets/images/footer_bg.jpg">
     </div>
 
-    <div class="grid_footer gap-y-24">
+    <div class="grid_footer ipad:gap-y-40 gap-y-20">
 
         <div class="grid_logo flex justify-start items-start">
             <img class="mr-10" src="<?php bloginfo('template_url')?>/src/assets/images/footer_logo_white.png">
-            <p class="font-primary font-thin text-primary text-h1 max-w-40"><?php echo $footer['title_footer']?></p>
+            <p class="font-primary font-thin text-primary text-h1 max-w-40 ipadH:block  hidden"><?php echo $footer['title_footer']?></p>
         </div>
 
         <div class="grid_contact flex flex-col justify-between">
@@ -47,10 +47,18 @@
         </div>
 
         <div class="grid_copyright">
-            <p class="flex font-thin text-primary">
+            <p class="font-thin text-primary ipad:flex hidden">
                 <span class="pr-2">Managed by</span>
                 <img class="object-contain pr-2" src="<?php bloginfo('template_url')?>/src/assets/images/logo_asg.png">
                 <span class="pr-2">|</span>
+                <span class="pr-2">Design & Marketing by</span>
+                <img class="object-contain pr-2" src="<?php bloginfo('template_url')?>/src/assets/images/logo_weplan.png">
+            </p>
+            <p class="font-thin text-primary ipad:hidden flex justify-center">
+                <span class="pr-2">Managed by</span>
+                <img class="object-contain pr-2" src="<?php bloginfo('template_url')?>/src/assets/images/logo_asg.png">
+            </p>
+            <p class="font-thin text-primary ipad:hidden flex justify-center">
                 <span class="pr-2">Design & Marketing by</span>
                 <img class="object-contain pr-2" src="<?php bloginfo('template_url')?>/src/assets/images/logo_weplan.png">
             </p>
