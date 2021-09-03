@@ -1,9 +1,10 @@
 
 <?php
 $tipo = get_sub_field('tipo');
+$options = get_sub_field('opciones');
 ?>
 
-<div class="module module-gallery">
+<div class="module module-gallery bg-<?php echo $options['bg_color']; ?>">
 
     <?php
     if( $tipo == 'carrusel'):

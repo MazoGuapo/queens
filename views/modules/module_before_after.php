@@ -1,9 +1,43 @@
 <?php
 $before = get_sub_field('before');
 $after = get_sub_field('after');
+$options = get_sub_field('opciones');
+$content = get_sub_field('contenido');
 ?>
 
-<div class="module module-block module_before_after">
+<div class="module module-block module_before_after bg-<?php echo $options['bg_color']; ?> flex items-center flex-col">
+
+  <!-- CONTENIDOS -->
+  <div class="wrapper_content pb-40 flex flex-col <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>  items-center text-center  w-2/5">
+
+  <?php if($content['sobretitulo']) { ?>
+      <div class="surtitle pb-20">
+          <p class="font-primary text-secondary italic"><?php echo $content['sobretitulo']; ?></p>
+      </div>
+  <?php } ?>
+
+  <?php if($content['titulo']) { ?>
+      <div class="title pb-10">
+          <p class="text-<?php echo $content['tamano_titulo']; ?> font-primary font-thin">
+              <?php echo $content['titulo']; ?>
+          </p>
+      </div>
+  <?php } ?>
+
+  <?php if($content['subtitulo']) { ?>
+      <div class="subtitle pb-16">
+          <p class="text-white"><?php echo $content['subtitulo']; ?></p>
+      </div>
+  <?php } ?>
+
+  <?php if($content['cuerpo']) { ?>
+  <div class="body">
+      <p class=""><?php echo $content['cuerpo']; ?></p>
+  </div>
+  <?php } ?>
+
+  </div>
+
 
   <div class="wrapper_before">
 

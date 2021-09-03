@@ -1,11 +1,12 @@
-body {
-    background-color: black !important;
+.text-destacado p {
+    @apply text-h3;
 }
 
-.font-secondary p {
-    @apply font-secondary;
-}
-
-.font-primary p {
+.font-titles p {
     @apply font-primary;
+}
+
+.bg-primary .text-primary,
+.bg-primary  p {
+    color: white;
 }

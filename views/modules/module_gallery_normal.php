@@ -1,13 +1,22 @@
 <?php
-$normal = get_sub_field('normal');
+    // VARIABLES
+    $normal = get_sub_field('normal');
 ?>
 
 <div class="module-full module-gallery-normal">
     
+    <!-- INTRO -->
     <div class="module-width mb-40">
-        <div class="grid grid-cols-2 gap-96">
-            <div class="font-primary text-<?php echo $normal['tamano_titulo'] ?> text-primary"><?php echo $normal['titulo'] ?></div>
-            <div class="text-<?php echo $normal['tamano_contenido'] ?> font-<?php echo $normal['estilo_contenido'] ?>"><?php echo $normal['contenido'] ?></div>
+        <div class="grid grid-cols-2 gap-96 items-<?php echo $normal['alineacion_intro'] ?>">
+            <!-- titulo -->
+            <div class="font-primary text-<?php echo $normal['tamano_titulo'] ?> text-primary flex items-center">
+                <?php if($normal['icono']): ?><img src="<?php echo $normal['icono'] ?>" alt="" class="mr-4"><?php endif; ?>
+                <?php echo $normal['titulo'] ?>
+            </div>
+            <!-- contenido -->
+            <div class="text-<?php echo $normal['tamano_contenido'] ?> font-<?php echo $normal['estilo_contenido'] ?>">
+                <?php echo $normal['contenido'] ?>
+            </div>
         </div>
     </div>
 
@@ -26,7 +35,7 @@ $normal = get_sub_field('normal');
                 <?php $n = 1; foreach ($normal['categorias'] as $imagen) { ?>
                     <div class="swiper-slide">
                         <a
-                        data-carousel="normal_lg_open_<?php echo $n ?>"
+                        data-gallery="normal_lg_open_<?php echo $n ?>"
                         class="button_lg">
                             <span class="image_baget text-white flex items-center text-h5" ><img class="mr-4" src="<?php bloginfo('template_url') ?>/src/assets/images/icon_play.png" alt=""><?php echo $imagen['titulo'] ?></span>
                             <img src="<?php echo $imagen['galeria'][0]['sizes']['theme_xlarge'] ?>" alt="" class="carousel_bg"class="carousel_bg">

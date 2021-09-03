@@ -1,5 +1,5 @@
 <?php
-    $options = get_sub_field('opciones_icons');
+    $options = get_sub_field('opciones');
     $layout = get_sub_field('layout_icons');
     $grid = $layout['columnas_grid'];
     $side = $layout['lateral_paddings'];
@@ -10,7 +10,7 @@
     $full_height = $options['full_height'];
 ?>
 
-<section class="module module-block module_icons flex flex-col min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color_icons']; ?> <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>">
+<section class="module module-block module_icons flex flex-col min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color']; ?> <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>">
 
     <!-- CONTENIDOS -->
     <div class="wrapper_content pb-40 flex flex-col <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>  items-center text-center  w-2/5">

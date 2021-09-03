@@ -14,6 +14,7 @@
 	$menu_items = wp_get_nav_menu_items('Header');
     $header = get_field('header', 'options');
     $link_dossier = $header['enlace_dossier'];
+    $header = get_field('header');
 	?>
 
     <!-- LOADING -->
@@ -62,14 +63,21 @@
     </div>
 
     <!-- HEADER -->
-    <header>
+    <header class="<?php echo $header; ?>">
 
         <!-- BRAND HEADER -->
         <div class="header_brand">
-            <a href="<?php bloginfo('url') ?>">
-                <img class="ipad:block hidden" src="<?php bloginfo('template_url') ?>/src/assets/images/logo_desktop.png">
-                <img class="ipad:hidden block" src="<?php bloginfo('template_url') ?>/src/assets/images/logo_mobile.png">
+
+            <a href="<?php bloginfo('url') ?>" class="brand_mobile">
+                <img src="<?php bloginfo('template_url') ?>/src/assets/images/logo_mobile_white.png" class="brand_white">
+                <img src="<?php bloginfo('template_url') ?>/src/assets/images/logo_mobile.png" class="brand_dark">
             </a>
+
+            <a href="" class="brand_desktop">
+                <img src="<?php bloginfo('template_url') ?>/src/assets/images/logo_desktop_white.png" class="brand_white">
+                <img src="<?php bloginfo('template_url') ?>/src/assets/images/logo_desktop_dark.png" class="brand_dark">
+            </a>
+
         </div>
 
         <!-- MENU LIST -->
