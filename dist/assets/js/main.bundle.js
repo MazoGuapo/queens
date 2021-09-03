@@ -343,8 +343,6 @@
 	/********* FUNCION SHRINK BODY ***********/
 	/*****************************************/
 	function shrink_body() {
-
-
 	  var offset = 150;
 	  var duration = 300;
 	  jQuery(window).scroll(function () {
@@ -356,19 +354,6 @@
 	      jQuery('.header__shadow').fadeOut();
 	    }
 	  });
-
-
-	  var prevScrollpos = window.pageYOffset;
-	  window.onscroll = function() {
-	    var currentScrollPos = window.pageYOffset;
-	    if (prevScrollpos > currentScrollPos) {
-	      jQuery('header').removeClass('header_hide');
-	    } else {
-	      jQuery('header').addClass('header_hide');
-	    }
-	    prevScrollpos = currentScrollPos;
-	  }
-
 	}
 
 	/*****************************************/

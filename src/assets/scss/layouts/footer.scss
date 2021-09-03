@@ -38,6 +38,9 @@ footer {
     grid-template-rows: auto auto auto auto;
     justify-content: center;
     align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
     grid-template-areas:
       "logo"
       "contact"
@@ -46,11 +49,14 @@ footer {
       "copy";
 
     @screen ipad {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: auto auto;
+      justify-items: flex-start;
+      align-items: flex-start;
+      text-align: left;
       grid-template-areas:
-        " logo . contact legal"
-        "copy . . social ";
+        "logo contact contact legal legal"
+        "copy copy copy copy social";
     }
 
     @screen ipadH {
@@ -95,15 +101,23 @@ footer {
   // MENU COPYRIGHT
   .grid_copyright {
     grid-area: copy;
+    justify-self: center;
+    align-self: center;
 
-    justify-self: flex-start;
-    align-self: flex-end;
+    @screen ipad {
+      justify-self: flex-start;
+      align-self: flex-end;
+    }
   }
 
   .grid_social {
     grid-area: social;
+    justify-self: center;
+    align-self: center;
 
-    justify-self: flex-end;
-    align-self: flex-end;
+    @screen ipad {
+      justify-self: flex-end;
+      align-self: flex-end;
+    }
   }
 }
