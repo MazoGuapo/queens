@@ -80,10 +80,10 @@ section.module_two_columns.active {
 }
 
 .decoration img {
-  animation: scrolldown 6s linear backwards  infinite;
+  animation: decoration_img 6s linear backwards  infinite;
 }
 
-@keyframes scrolldown {
+@keyframes decoration_img {
   0% { transform:  rotate(0);  }
   100% { transform:  rotate(360deg); }
 }
