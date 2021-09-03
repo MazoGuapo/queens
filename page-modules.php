@@ -29,6 +29,9 @@ if(have_rows('modules')):
         elseif(get_row_layout() == 'module_maps'):
             require('views/modules/module_maps.php');
 
+        elseif(get_row_layout() == 'module_team'):
+            require('views/modules/module_team.php');
+
         endif;
 
     endwhile;
