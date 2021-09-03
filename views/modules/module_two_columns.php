@@ -26,7 +26,7 @@
 
 <section class="module module-<?php echo $layout['lateral_paddings']; ?> module_two_columns min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color']; ?>">
 
-    <div class="wrapper flex ipadH:flex-<?php echo $flex_dir; ?> flex-col-reverse">
+    <div class="wrapper flex ipadH:flex-<?php echo $layout['flex_direction']; ?> flex-col-reverse">
 
         <div class="wrapper_image">
 
@@ -57,7 +57,7 @@
 
         </div>
 
-        <div class="wrapper_content w-2/4 flex flex-col <?php echo $alineacion; ?>">
+        <div class="wrapper_content flex flex-col <?php echo $alineacion; ?>">
 
             <?php if($content['sobretitulo']) { ?>
                 <div class="surtitle w-full mb-20 transition">
