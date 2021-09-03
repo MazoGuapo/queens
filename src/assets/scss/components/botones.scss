@@ -4,19 +4,32 @@
 
 .btn {
   @include botones;
-  border: 1px solid white;
-  color: white;
-  display: inline-block;
-
+  @apply text-white bg-primary inline-block;
+  border: 1px solid transparent;
   &:hover {
-    background-color: lightgray;
-    color: white;
-    border: 1px solid white;
+    @apply text-primary bg-secondary border-primary;
     &:before {
       width: 100%;
     }
   }
 }
+
+.btn-line {
+  @include botones;
+  @apply text-white bg-transparent inline-block;
+  border: 1px solid white;
+  &:hover {
+    @apply text-primary bg-secondary border-primary;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+
 
 .btn_dark_transparent {
   @include botones;

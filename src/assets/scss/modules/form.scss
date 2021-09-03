@@ -1,0 +1,25 @@
+.module_form {
+
+    .wrapper_image {
+        position: relative;
+    }
+
+    .dossier_text {
+        top: 8rem;
+        width: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+        @apply absolute font-primary font-thin text-h1 text-white text-center;
+        strong {
+            @apply underline font-thin;
+        }
+    }
+
+    .dossier_link {
+        @apply absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(270deg);
+    }
+
+}

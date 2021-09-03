@@ -65,5 +65,10 @@ module.exports = {
       base: ['18px', '24px'],
       tiny: ['12px', '12px'],
     },
+    extend: {
+      spacing: {
+       '96': '35rem',
+      }
+    }
   },
 }

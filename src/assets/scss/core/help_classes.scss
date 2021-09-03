@@ -1,0 +1,11 @@
+body {
+    background-color: black !important;
+}
+
+.font-secondary p {
+    @apply font-secondary;
+}
+
+.font-primary p {
+    @apply font-primary;
+}

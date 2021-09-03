@@ -1,10 +1,10 @@
 // BOTON BASE
 @mixin botones {
-
-  @apply font-secondary font-light;
-
+  @apply font-secondary font-light text-h7;
   border-radius: 30px;
-  border: none;
-  background: transparent;
-  padding: 0.8rem 2.5rem;
+  padding: 11px 20px;
+  @screen ipad {
+    @apply text-h5;
+    padding: 14px 30px;
+  }
 }

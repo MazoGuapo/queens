@@ -14,13 +14,12 @@
 .lg-toolbar {
     position                : absolute;
     background              : transparent;
-    right                   : 50%;
+    right                   : 0;
     left                    : initial !important;
-    top                     : 3rem !important;
+    top                     : 0 !important;
     opacity                 : 1 !important;
     transform               : none !important;
-    text-align              : center;
-
+    text-align              : right;
     z-index                 : 6000;
 }
 
@@ -32,34 +31,32 @@
 .lg-close {
     position                : fixed;
     background              : transparent;
-    right                   : initial;
-    left                    : 50% !important;
+    right                   : 3rem !important;
+    // left                    : 50% !important;
     top                     : 3.2rem !important;
     opacity                 : 1 !important;
     text-align              : center;
-
-    z-index                 : 6000;
-    width                 : 40px !important;
-    height                : 40px !important;
-    background-image      : url(../assets/img/close.png) !important;
+    z-index                : 6000;
+    width                 : initial !important;
+    height                : initial !important;
+    // background-image      : url(../assets/img/close.png) !important;
+    @apply font-secondary;
     background-size       : cover !important;
     line-height           : inherit !important;
     text-shadow           : unset !important;
     font-size             : 1.5rem !important;
-    font-family           : sans-serif;
-    font-weight           : 600;
     padding               : 0 !important;
     opacity               : 1 !important;
     color                 : white !important;
-
     &:hover {
         color             : grey; }
     &:after {
-        content           : '' !important;
+        content           : 'Cerrar' !important;
+        @apply font-secondary;
     }
 
     @media ( min-width: 768px  ) {
-        top                     : 4.5rem !important;
+        top                     : 2rem !important;
     }
 }
 
@@ -112,39 +109,41 @@
     }
 }
 
-.lg-actions {
-    position: unset;
-    button {
-        padding                   : 0 !important;
-        opacity                   : 1 !important;
-        position                  : absolute;
-        background                : transparent !important;
-        top                       : 50%;
+.lg-next,
+.lg-prev {
+    padding                   : 0 !important;
+    opacity                   : 1 !important;
+    position                  : absolute;
+    background                : transparent !important;
+    // top                       : 50%;
+    width                     : 3rem;
+    height                    : 3rem;
+    overflow                  : hidden;
+    // text-indent               : -999px;
 
-        width                     : 13px;
-        height                    : 31px;
-        overflow                  : hidden;
-        text-indent               : -999px;
+    @media ( min-width: 768px ) {
+        width                     : 6rem;
+        height                    : 6rem;
+    }
 
-        @media ( min-width: 992px ) {
-            width                     : 15px;
-            height                    : 38px;
-        }
+    @media ( min-width: 992px ) {
+        width                     : 9rem;
+        height                    : 9rem;
+    }
 
-        @media ( min-width: 992px ) {
-            width                     : 20px;
-            height                    : 50px;
-        }
+    &.lg-prev  {
+        left                  : 30px;
+        background-image      : url(../assets/img/arrow_gallery_left.png) !important;
+        background-size       : cover !important;
+    }
+    &.lg-next {
+        right                 : 30px;
+        background-image      : url(../assets/img/arrow_gallery_right.png) !important;
+        background-size       : cover !important;
+    }
 
-        &.lg-prev  {
-            left                  : 30px;
-            background-image      : url(../assets/img/arrow_gallery_left.png) !important;
-            background-size       : cover !important;
-        }
-        &.lg-next {
-            right                 : 30px;
-            background-image      : url(../assets/img/arrow_gallery_right.png) !important;
-            background-size       : cover !important;
-        }
+    &:before,
+    &:after {
+        display: none;
     }
 }

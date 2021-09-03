@@ -12,7 +12,7 @@ require_once('library/pace/pace.php');
 // require_once('library/waypoints/waypoints.php');
 // require_once('library/stellar/stellar.php');
 // require_once('library/google_maps/google_maps.php');
-// require_once('library/classie/classie.php');
+require_once('library/classie/classie.php');
 require_once('library/lightgallery2/lightgallery.php');
 // // require_once('library/animate/animate.php');
 // // require_once('library/typed/typed.php');

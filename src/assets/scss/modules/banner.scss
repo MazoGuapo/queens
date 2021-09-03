@@ -57,7 +57,10 @@ section.module {
     }
 
     .buttons {
-      @apply w-auto;
+      @apply w-auto flex;
+      a {
+        @apply mx-3;
+      }
     }
   }
 }

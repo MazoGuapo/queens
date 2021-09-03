@@ -1,38 +1,73 @@
-
 .swiper {
+
     max-width: 100%;
-    overflow: hidden;
-    position: relative;
+    overflow : hidden;
+    position : relative;
 
     &-pagination {
         bottom: 9rem !important;
 
         .swiper-pagination-bullet {
             background-color: white !important;
-            width: 1.2rem;
-            height: 1.2rem;
+            width           : 1.2rem;
+            height          : 1.2rem;
         }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width : 3rem !important;
+        height: 3rem !important;
+
+        @media (min-width: 768px) {
+            width : 6rem !important;
+            height: 6rem !important;
+        }
+
+        @media (min-width: 992px) {
+            width : 9rem !important;
+            height: 9rem !important;
+        }
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        width  : 100%;
+        height : 100%;
+        content: '';
+        display: block;
+    }
+
+    .swiper-button-prev:after {
+        background-image: url(../../images/arrow_left.png);
+    }
+
+    .swiper-button-next:after {
+        background-image: url(../../images/arrow_right.png);
     }
 
     // BANNER
     &-banner {
-        width: 100%;
+        width : 100%;
         height: 100vh;
+
         img {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
+            width          : 100%;
+            height         : 100vh;
+            object-fit     : cover;
             object-position: center;
         }
     }
 
     // CARRUSEL
-    &-carousel {
+    &-carousel,
+    &-normal {
         .swiper-slide {
             width: fit-content;
-            img {
+
+            .carousel_bg {
                 height: 50vh;
-                width: auto;
+                width : auto;
             }
         }
     }
@@ -44,18 +79,23 @@
 .swiper-gallery .swiper-wrapper {
     .swiper-slide:first-child {
         width: var(--padding_mobile);
+
         @screen ipad {
             width: var(--padding_ipad);
         }
+
         @screen ipadH {
             width: var(--padding_ipadH);
         }
+
         @screen laptop {
             width: var(--padding_laptop);
         }
+
         @screen desktop {
             width: var(--padding_desktop);
         }
+
         @screen wide {
             width: var(--padding_wide);
         }
@@ -65,28 +105,65 @@
 
 .swiper-carousel .swiper-wrapper {
     .swiper-slide:first-child {
-        opacity: 0;
-        transition: all 0.3s;
-        width: 50%;
+        opacity     : 0;
+        transition  : all 0.3s;
+        width       : 50%;
         padding-left: var(--padding_mobile);
+        align-self: center;
+
         @screen ipad {
             padding-left: var(--padding_ipad);
         }
+
         @screen ipadH {
             padding-left: var(--padding_ipadH);
         }
+
         @screen laptop {
             padding-left: var(--padding_laptop);
         }
+
         @screen desktop {
             padding-left: var(--padding_desktop);
         }
+
         @screen wide {
             padding-left: var(--padding_wide);
         }
+
         &.swiper-slide-active {
             opacity: 1;
         }
     }
-    
+
+}
+
+.swiper-normal {
+    .swiper-slide:first-child {
+        padding-left: var(--padding_mobile);
+
+        @screen ipad {
+            padding-left: var(--padding_ipad);
+        }
+
+        @screen ipadH {
+            padding-left: var(--padding_ipadH);
+        }
+
+        @screen laptop {
+            padding-left: var(--padding_laptop);
+        }
+
+        @screen desktop {
+            padding-left: var(--padding_desktop);
+        }
+
+        @screen wide {
+            padding-left: var(--padding_wide);
+        }
+
+        &.swiper-slide-active {
+            opacity: 1;
+        }
+    }
 }

@@ -1,21 +1,20 @@
-section.module_two_columns {
+section.module_two_columns,
+section.module_form {
 
   .wrapper_image {
     width: 40%;
     margin-right: 14%;
     position: relative;
-
     .decoration {
       position: absolute;
       top: 0;
       right: 0;
       transform: translate( 50%, -30% );
-    }
-     
+    }     
   }
 
   .wrapper_content {
-
+    width: 66%;
     padding-right: var(--padding_mobile);
     @screen ipad {
       padding-right: var(--padding_ipad);

@@ -53,14 +53,6 @@ const swiper = new Swiper('.swiper-banner', {
 });
 
 
-
-
-
-
-
-
-
-
 const swiper2 = new Swiper('.swiper-gallery', {
   // Optional parameters
   direction: 'horizontal',
@@ -92,6 +84,26 @@ const swiper3 = new Swiper('.swiper-carousel', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+const swiper4 = new Swiper('.swiper-normal', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  freeMode: {
+    enabled: true,
+    sticky: true,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+
 
 // ALTURA VIEWPORT
 altura_viewport();

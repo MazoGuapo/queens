@@ -2,6 +2,7 @@
     $content = get_sub_field('contenido_form');
     $layout = get_sub_field('layout_form');
     $image = get_sub_field('image_form');
+    $dossier = get_sub_field('dossier');
     $options = get_sub_field('opciones_form');
     $alineacion = get_sub_field('alineacion_form');
 ?>
@@ -11,15 +12,21 @@
 
     <div class="wrapper flex flex-row">
 
-        <div class="wrapper_image w-2/4">
+        <div class="wrapper_image">
+
+            <div class="dossier_text"><?php echo $dossier['texto']; ?></div>
+
+            <a class="dossier_link" href="<?php echo $dossier['archivo']; ?>">
+                <img src="<?php bloginfo('template_url') ?>/src/assets/images/arrow_left.png" alt="">
+            </a>
 
             <?php if($image) { ?>
-            <img src="<?php echo $image['sizes']['theme_full'] ?>" alt="">
+                <img src="<?php echo $image['sizes']['theme_full'] ?>" alt="">
             <?php } ?>
 
         </div>
 
-        <div class="wrapper_content w-2/4 flex flex-col <?php echo $alineacion; ?>">
+        <div class="wrapper_content  flex flex-col <?php echo $alineacion; ?>">
 
             <?php if($content['titulo']) { ?>
             <div class="title pb-20">
