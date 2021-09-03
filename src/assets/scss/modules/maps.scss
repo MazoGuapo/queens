@@ -1,0 +1,221 @@
+// _16_bloques.scss
+
+/******************************/
+/*********** MAPA *************/
+/******************************/
+
+.module_maps {
+  position: relative;
+  z-index: 0;
+  height: 100vh;
+  width: 100%;
+
+  // WRAP
+  .map {
+
+    // GENERAL
+    .acf-map {
+      width: 100%;
+      height: 100vh;
+      border: 0;
+      margin: 0;
+    }
+  }
+
+  // FILTERS
+  .map-filters {
+    position: absolute;
+    z-index: 1;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      position: relative;
+      padding-right: 2rem;
+
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 30px;
+      padding: 11px 20px;
+      @apply font-secondary font-light text-h7 text-primary bg-secondary-dark inline-block;
+
+      &.is-active {
+        @apply text-secondary bg-primary;
+      }
+    //   &:before {
+    //     content: "";
+    //     display: block;
+    //     width: 25px;
+    //     height: 15px;
+    //     margin: 0 10px 0 0;
+    //     background-image: url(../assets/img/arrow_filtros.png);
+    //     background-position: center right;
+    //     background-size: auto 100%;
+    //     @media (min-width: 768px) {
+    //       width: 33px;
+    //     }
+    //   }
+
+    //   &:hover:before,
+    //   &.is-active:before {
+    //     width: 58px;
+    //     @media (min-width: 768px) {
+    //       width: 59px;
+    //     }
+    //   }
+    }
+  }
+}
+
+// CONTROLES - TYPE
+.gm-fullscreen-control {
+  position: absolute !important;
+  bottom: 2rem !important;
+  left: 2rem !important;
+  top: inherit !important;
+  left: inherit !important;
+}
+
+// CONTROLES - ZOOM
+.gm-bundled-control {
+  width: 20px !important;
+  height: 20px !important;
+  z-index: 1000;
+
+  > .gmnoprint > div {
+    background: transparent !important;
+    box-shadow: none !important;
+    div {
+      display: none;
+    }
+    button {
+      border: 0 !important;
+      margin: 0 0 10px !important;
+      width: 26px !important;
+      height: 26px !important;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      img {
+        display: none !important;
+      }
+    }
+
+    button:first-child {
+      background: url(../assets/img/zoom_in.jpg) !important;
+      background-size: cover !important;
+    }
+    button:last-child {
+      background: url(../assets/img/zoom_out.jpg) !important;
+      background-size: cover !important;
+    }
+  }
+}
+
+.gm-style,
+.marker-content {
+  @apply font-secondary;
+}
+
+// INFOWINDOW flecha
+.gm-style .gm-style-iw-t::after {
+  display: none !important;
+}
+
+.gm-style-iw-d {
+  font-size: 1.6rem !important;
+  color: black !important;
+
+  .marker-content {
+    padding: 0 !important;
+    margin: 0 !important;
+
+    hr {
+        border-top: 1px solid white !important
+    }
+
+    .map_title {
+      @apply font-secondary;
+    }
+
+    .distance {
+      position: relative;
+      display: flex;
+
+      img {
+        max-width: 24px;
+      }
+
+      &:after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 13px;
+        background: url(../assets/img/mapa_person.png);
+        background-size: cover !important;
+        margin: 3px 5px 5px 0;
+      }
+    }
+  }
+}
+
+
+// INFOWINDOW general y contenido
+.gm-style .gm-style-iw-c {
+  border-radius: 0 !important;
+  padding: 1.5rem 1.5rem !important;
+  background: #D0C9BE !important;
+  color: black;
+  max-width: 590px !important;
+  box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+  left: 0;
+  top: 0;
+  margin-top: -15px;
+
+  .market-title {
+    color: black;
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  button {
+    top: 14px !important;
+    right: 14px !important;
+    width: 8px !important;
+    height: 8px !important;
+    &:before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      background: url(../src/assets/images/window_close.png);
+      background-size: cover !important;
+    }
+    img {
+      display: none !important;
+    }
+  }
+
+  span {
+    font-size: 1.6rem !important;
+    color: black !important;
+  }
+}
+
+.gm-style .gm-style-iw-d {
+  overflow: visible !important;
+}
+
+// ANIMACIONS
+.active.module_mapa {
+  .sobretitulo,
+  .map,
+  .map-filters {
+    opacity: 1;
+  }
+}

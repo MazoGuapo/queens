@@ -14,6 +14,18 @@
   }
 }
 
+.btn_fliter {
+  @include botones;
+  @apply text-primary bg-secondary inline-block;
+  border: 1px solid transparent;
+  &:hover {
+    @apply text-primary bg-secondary-light border-primary;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
 .btn-line {
   @include botones;
   @apply text-white bg-transparent inline-block;
@@ -25,11 +37,6 @@
     }
   }
 }
-
-
-
-
-
 
 .btn_dark_transparent {
   @include botones;

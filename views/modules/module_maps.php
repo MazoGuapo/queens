@@ -2,7 +2,7 @@
     $direccion_inicial = get_sub_field('direccion_inicial');
 	$filtros = get_sub_field('filters');
 ?>
-<section class="module module_mapa">
+<section class="module module_maps">
 
 	<div class="map">
 		<!-- MAPA -->
@@ -15,8 +15,12 @@
 						<div class="marker-content">
 							<!-- TITULO -->
 							<div class="map_title">
-								<p class="distance"><?php echo $loc['distancia']; ?></p>
-								<?php echo $loc['titulo']; ?>
+								<p class="text-h7 text-primary "><?php echo $loc['titulo']; ?></p>
+							</div>
+							<hr>
+							<!-- DISTANCIA -->
+							<div class="map_distance">
+								<p class="distance text-h7 text-primary"><?php echo $loc[ 'distancia']; ?>' desde Queens</p>
 							</div>
 						</div>
 					</div>

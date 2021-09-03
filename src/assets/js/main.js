@@ -8,11 +8,15 @@ const $ = jQuery = require('jquery');
 /******** LOADING PACE FIRST TIME ********/
 /*****************************************/
 
-Pace.once('hide', function(){
-  // INICIO
-  inicio();
-  console.log('pepito')
-});
+// paceOptions = {
+//   eventLag: false, // disabled
+// };
+
+// Pace.once('hide', function(){
+//   // INICIO
+//   inicio();
+//   console.log('pepito')
+// });
 
 /*****************************************/
 /*********** FUNCIONES INICIO ************/
@@ -24,7 +28,7 @@ function inicio() {
   setTimeout(
     function(){
       jQuery('.cargador').css('display','none');
-  }, 500); 
+  }, 500);
 
   // LOADING HIDE
   setTimeout(
@@ -201,7 +205,7 @@ function altura_viewport() {
 //   setTimeout(
 //     function(){
 //       jQuery('.cargador').css('display','none');
-//   }, 500); 
+//   }, 500);
 
 //   // LOADING HIDE
 //   setTimeout(

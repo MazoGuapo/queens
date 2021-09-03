@@ -17,11 +17,11 @@
 	?>
 
     <!-- LOADING -->
-    <div class="cargador">
+    <!-- <div class="cargador">
     	<div class="brand">
-    		<img src="<?php bloginfo( 'template_url' ); ?>/src/assets/images/loading_brand.png" class="img-fluid">
+    		<img src="<?php //bloginfo( 'template_url' ); ?>/src/assets/images/loading_brand.png" class="img-fluid">
     	</div>
-    </div> 
+    </div>  -->
 
     <!-- MENU MOBILE -->
     <div class="menu__wrap">
