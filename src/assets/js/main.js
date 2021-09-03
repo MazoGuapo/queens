@@ -58,6 +58,7 @@ function inicio() {
 }
 
 
+
 const swiper = new Swiper('.swiper-banner', {
   // Optional parameters
   direction: 'horizontal',
@@ -536,7 +537,6 @@ slider.oninput = ()=>{
   dragLine.style.right = right + "%";
   img.style.width = right + "%";
 }
-
 
 /************************/
 /** GRID  LIGHTGALLERY **/

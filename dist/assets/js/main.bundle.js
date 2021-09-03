@@ -104,6 +104,7 @@
 	}
 
 
+
 	const swiper = new Swiper('.swiper-banner', {
 	  // Optional parameters
 	  direction: 'horizontal',
@@ -582,7 +583,6 @@
 	  dragLine.style.right = right + "%";
 	  img.style.width = right + "%";
 	}
-
 
 	/************************/
 	/** GRID  LIGHTGALLERY **/
