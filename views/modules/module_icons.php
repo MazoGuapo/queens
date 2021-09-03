@@ -13,17 +13,17 @@
 <section class="module module-block module_icons flex flex-col min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color']; ?> <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>">
 
     <!-- CONTENIDOS -->
-    <div class="wrapper_content pb-40 flex flex-col <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>  items-center text-center  w-2/5">
+    <div class="wrapper_content flex flex-col <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>  items-center text-center  w-2/5">
 
         <?php if($content['sobretitulo']) { ?>
-            <div class="surtitle pb-20">
+            <div class="surtitle ipadH:pb-20 ipad:pb-16 pb-14">
                 <p class="font-primary text-secondary italic"><?php echo $content['sobretitulo']; ?></p>
             </div>
         <?php } ?>
 
         <?php if($content['titulo']) { ?>
-            <div class="title pb-10">
-                <p class="text-<?php echo $content['tamano_titulo']; ?> font-primary font-thin text-white">
+            <div class="title ipadH:pb-40 ipad:pb-28 pb-14">
+                <p class="ipad:text-<?php echo $content['tamano_titulo']; ?> text-h3 font-primary font-thin text-white">
                     <?php echo $content['titulo']; ?>
                 </p>
             </div>
@@ -45,12 +45,12 @@
 
     <!-- ICONOS -->
     <div class="wrapper_icons w-full">
-        <div class="icons grid grid-cols-<?php echo $grid['grid_col_mobile']; ?> ipad:grid-cols-<?php echo $grid['grid_col_ipad']; ?> laptop:grid-cols-<?php echo $grid['grid_col']; ?> grid-flow-row gap-y-40">
+        <div class="icons grid grid-cols-<?php echo $grid['grid_col_mobile']; ?> ipad:grid-cols-<?php echo $grid['grid_col_ipad']; ?> laptop:grid-cols-<?php echo $grid['grid_col']; ?> grid-flow-row ipadH:gap-y-40 ipad:gap-y-28 gap-y-14 justify-center content-center ">
             <?php foreach($icons as $icon) { ?>
             <div class="icon flex flex-<?php echo $layout['flex_dir_icon'];?> items-center justify-center">
                 <img src="<?php echo $icon['symbol']['sizes']['theme_full']; ?>" alt="" class="p-4">
                 <div class="content_icon <?php echo $layout['alineacion_texto'];?> flex justify-center">
-                    <p class="title text-white font-primary text-h4"><?php echo $icon['content_icon']['title']; ?></p>
+                    <p class="title text-white font-primary ipad:text-h4 text-h7"><?php echo $icon['content_icon']['title']; ?></p>
                     <p class="body"><?php echo $icon['content_icon']['body']; ?></p>
                 </div>
             </div>

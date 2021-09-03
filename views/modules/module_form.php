@@ -10,9 +10,9 @@
 <section
     class="module module-<?php echo $layout['lateral_paddings']; ?> module_form h-full w-full bg-<?php echo $options['bg_color']; ?>">
 
-    <div class="wrapper flex flex-row">
+    <div class="wrapper flex ipadH:flex-row flex-col">
 
-        <div class="wrapper_image">
+        <div class="wrapper_image ipadH:pb-0 pb-32">
 
             <div class="dossier_text"><?php echo $dossier['texto']; ?></div>
 
