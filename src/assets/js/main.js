@@ -5,12 +5,28 @@ const $ = jQuery = require('jquery');
 // const Swiper = require('swiper');
 
 /*****************************************/
-/******** LOADING PACE FIRST TIME ********/
+/************ BASE FUNCTIONS *************/
 /*****************************************/
 
-// paceOptions = {
-//   eventLag: false, // disabled
-// };
+// MENU
+menu();
+// FORMULARIOS ENRIQUECIDOS
+formularios();
+// SCROLL INICIAL
+shrink_body();
+// OCULTAR MENU
+jQuery('.menu__wrap').fadeOut('');
+
+/*****************************************/
+/******** LOADING PACE FIRST TIME ********/
+/*****************************************/
+paceOptions = {
+  eventLag: false, // disabled
+};
+
+Pace.once('hide', function(){
+  inicio();
+});
 
 // Pace.once('hide', function(){
 //   // INICIO
@@ -109,22 +125,10 @@ const swiper4 = new Swiper('.swiper-normal', {
 
 
 
-// ALTURA VIEWPORT
-altura_viewport();
-// MENU
-menu();
-// FORMULARIOS ENRIQUECIDOS
-formularios();
-// SCROLL INICIAL
-shrink_body();
-
-
 // // REEMPLAZAR IMG POR SVG
 // // svg_replace();
 // // TITULOS ANIMADOS > SPAN
 // // if ( jQuery('.animated_letters').length ) { animated_letters(); }
-// OCULTAR MENU
-jQuery('.menu__wrap').fadeOut('');
 // // AJAX MODAL GALLERY
 // if ( jQuery('.btn_gallery').length ) { modal_ajax_gallery(); }
 // // CARRUSEL FICHA
@@ -136,17 +140,7 @@ jQuery('.menu__wrap').fadeOut('');
 
 // if ( jQuery('.owl-carousel.wrapper_bottom').length ) { carrusel_icono_textos(); }
 
-
 // jQuery(window).stellar();
-
-
-// AJUSTES HEIGHT DEVICES
-function altura_viewport() {
-  // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-  let vh = window.innerHeight * 0.01;
-  // Then we set the value in the --vh custom property to the root of the document
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
 
 // jQuery( window ).resize(function() {
 //   altura_viewport()
@@ -566,6 +560,9 @@ if( jQuery(".button_lg_iframe").length > 0 ) {
   var elements = document.getElementsByClassName('button_lg_iframe');
   for (let item of elements) {
       lightGallery(item, {
+        addClass: 'lg_iframe',
+        counter: false,
+        download: false,
         selector: 'this',
         licenseKey: 'RWGFX-KWFPH-57MZ4-GKE8B',
       })

@@ -3,12 +3,12 @@
     $layout = get_sub_field('layout_form');
     $image = get_sub_field('image_form');
     $dossier = get_sub_field('dossier');
-    $options = get_sub_field('opciones_form');
+    $options = get_sub_field('opciones');
     $alineacion = get_sub_field('alineacion_form');
 ?>
 
 <section
-    class="module module-<?php echo $layout['lateral_paddings']; ?> module_form h-full w-full bg-<?php echo $options['bg_color_form']; ?>">
+    class="module module-<?php echo $layout['lateral_paddings']; ?> module_form h-full w-full bg-<?php echo $options['bg_color']; ?>">
 
     <div class="wrapper flex flex-row">
 

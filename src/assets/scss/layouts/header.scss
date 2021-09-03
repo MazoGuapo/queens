@@ -2,24 +2,24 @@
 /*********** HEADER ***********/
 /******************************/
 
-.header_gracias,
-.header_legal {
-
-  .header_brand {
-    margin: 4rem 0 !important;
-    img {
-      width: 100%;
-    }
-  }
-
-  .menu li a {
-    color: white !important;
-  }
-}
+// .header_gracias,
+// .header_legal {
+//   .header_brand {
+//     margin: 4rem 0 !important;
+//     img {
+//       width: 100%;
+//     }
+//   }
+//   .menu li a {
+//     color: white !important;
+//   }
+// }
 
 // WRAP
 header {
   @extend %paddings_laterales;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
   position: fixed;
   z-index: 500;
@@ -33,6 +33,8 @@ header {
   grid-template-areas: "logo menbut";
   justify-content: center;
   align-content: center;
+
+  transition: all 0.3s;
 
   @media (min-width: 992px) {
     grid-template-areas: "logo nav";
@@ -49,19 +51,63 @@ header {
   justify-self: flex-start;
   align-self: center;
 
-  margin: 4rem 0;
+  // MOBILE
+  .brand_mobile {
+    transition: all 0.3s;       
+    @screen ipadH {
+      display: none;
+    }
+    img {
+      width: 32px;
+      @screen ipadH {
+        width: 35px;
+      }
+    }
+  }
 
-  img {
-    width: 26px;
-
-    @media (min-width: 992px) {
-      width: 35px;
+  // DESKTOP
+  .brand_desktop {
+    transition: all 0.3s;
+    display: none;     
+    @screen ipadH {
+      display: block;
+    }  
+    img {
+      width: 168px;
     }
   }
 }
 
-.shrink header .menu__brand {
-  opacity: 0;
+.brand_dark {
+  display: none;
+}
+
+header.dark {
+  .brand_dark {
+    display: block;
+  }
+  .brand_white {
+    display: none;
+  }
+}
+
+.shrink {
+
+  .brand_desktop {
+    display: none;
+  }
+  .brand_mobile {
+    display: block;
+  }
+
+  .brand_dark {
+    display: block;
+  }
+
+  .brand_white {
+    display: none;
+  }
+
 }
 
 // MENU
@@ -113,7 +159,8 @@ header ul.menu li.current a:after {
   }
 }
 
-.shrink header ul.menu li a {
+.shrink header ul.menu li a,
+header.dark ul.menu li a {
   @apply text-primary;
   &:after {
     background: white;
@@ -284,91 +331,5 @@ header ul.menu li.current a:after {
 
   .wpml-ls-sub-menu {
     background: white;
-  }
-}
-
-// MENU MOBILE > wrap
-.menu__wrap {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 9000;
-  width: 100%;
-  height: 100vh;
-
-  background-color: #cec7bc;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.logo_menu_wrap {
-  position: absolute;
-  overflow: hidden;
-
-  left: 2rem;
-  top: 3rem;
-
-  @media (min-width: 768px) {
-    left: 5rem;
-    top: 5rem;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
-// MENU MOBILE > buttons
-.icon-list {
-  text-align: center;
-}
-
-.icon-list .active a p,
-.icon-list a:hover p,
-.icon-list a:focus p,
-.icon-list ul .current a p {
-  color: white;
-}
-
-// CLOSE MENU
-.close-button {
-  display: none;
-  position: absolute;
-  overflow: hidden;
-  border: none;
-  cursor: pointer;
-
-  right: 2rem;
-  top: 3rem;
-
-  @media (min-width: 768px) {
-    right: 5rem;
-    top: 5rem;
-  }
-
-  &:focus {
-    outline: none;
-  }
-}
-
-//BOTON DESCARGA DOSSIER
-.dossier_button {
-  position: absolute;
-  left: 50%;
-  bottom: 12rem;
-  transform: translateX(-50%);
-
-  @media (min-width: 768px) {
-    left: 50%;
-    bottom: 12rem;
-    transform: translateX(-50%);
   }
 }

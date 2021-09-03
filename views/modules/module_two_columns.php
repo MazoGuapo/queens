@@ -3,7 +3,7 @@
     $layout = get_sub_field('layout_2col');
     $media = get_sub_field('media_2col');
     $buttons = get_sub_field('botones_2col');
-    $options = get_sub_field('opciones_2col');
+    $options = get_sub_field('opciones');
     $alineacion = get_sub_field('alineacion_2col');
     $align_type = $alineacion['alineacion_tipo'];
     $full_height = $options['full_height'];
@@ -24,7 +24,7 @@
 
 ?>
 
-<section class="module module-<?php echo $layout['lateral_paddings']; ?> module_two_columns min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color_2col']; ?>">
+<section class="module module-<?php echo $layout['lateral_paddings']; ?> module_two_columns min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color']; ?>">
 
     <div class="wrapper flex flex-row ipadH:flex-<?php echo $flex_dir; ?> ">
 
@@ -49,9 +49,11 @@
                 </div>
             <?php } ?>
 
-            <div class="w-full text-right mt-5 ">
-                <p class="text-h6">San Sebastián de los Reyes se encuentra a unos pasos del nudo norte de Madrid</p>
-            </div>
+            <?php if($media['pie_media']): ?>
+                <div class="w-full text-right mt-5 ">
+                    <p class="text-h6"><?php echo $media['pie_media']; ?></p>
+                </div>
+            <?php endif; ?>
 
         </div>
 

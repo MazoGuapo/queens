@@ -1,0 +1,89 @@
+/******************************/
+/*********** HEADER ***********/
+/******************************/
+
+// MENU MOBILE > wrap
+.menu__wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9000;
+  width: 100%;
+  height: 100vh;
+
+  background-color: #cec7bc;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo_menu_wrap {
+  position: absolute;
+  overflow: hidden;
+
+  left: 2rem;
+  top: 3rem;
+
+  @media (min-width: 768px) {
+    left: 5rem;
+    top: 5rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+// MENU MOBILE > buttons
+.icon-list {
+  text-align: center;
+}
+
+.icon-list .active a p,
+.icon-list a:hover p,
+.icon-list a:focus p,
+.icon-list ul .current a p {
+  color: white;
+}
+
+// CLOSE MENU
+.close-button {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+
+  right: 2rem;
+  top: 3rem;
+
+  @media (min-width: 768px) {
+    right: 5rem;
+    top: 5rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+//BOTON DESCARGA DOSSIER
+.dossier_button {
+  position: absolute;
+  left: 50%;
+  bottom: 12rem;
+  transform: translateX(-50%);
+
+  @media (min-width: 768px) {
+    left: 50%;
+    bottom: 12rem;
+    transform: translateX(-50%);
+  }
+}
