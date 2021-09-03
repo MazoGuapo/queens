@@ -16,17 +16,17 @@
     if( $decoration['activado'][0] == 'on'):
         if($decoration['tipo'] == 'imagen'):
             $output_imagen .= '<div class="decoration decoration_image"><img src="'.$decoration['imagen']['sizes']['theme_full'].'"></div>';
-        endif;   
+        endif;
         if($decoration['tipo'] == 'bottom'):
             $output_bottom .= '<div class="decoration"><img src="'.$decoration['imagen']['sizes']['theme_full'].'"></div>';
-        endif;       
-    endif;   
+        endif;
+    endif;
 
 ?>
 
 <section class="module module-<?php echo $layout['lateral_paddings']; ?> module_two_columns min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color']; ?>">
 
-    <div class="wrapper flex flex-row ipadH:flex-<?php echo $flex_dir; ?> ">
+    <div class="wrapper flex ipadH:flex-<?php echo $layout['flex_direction']; ?> flex-col-reverse">
 
         <div class="wrapper_image">
 
@@ -57,17 +57,17 @@
 
         </div>
 
-        <div class="wrapper_content w-2/4 flex flex-col <?php echo $alineacion; ?>">
+        <div class="wrapper_content flex flex-col <?php echo $alineacion; ?>">
 
             <?php if($content['sobretitulo']) { ?>
                 <div class="surtitle w-full mb-20 transition">
-                    <p class="text-primary italic"><?php echo $content['sobretitulo']; ?></p>
+                    <p class="text-primary ipad:text-h5 text-h6 text-h6italic"><?php echo $content['sobretitulo']; ?></p>
                 </div>
             <?php } ?>
 
             <?php if($content['titulo']) { ?>
             <div class="title w-4/5 pb-20">
-                <p class="text-<?php echo $content['tamano_titulo']; ?> font-primary font-thin text-primary">
+                <p class="ipad:text-<?php echo $content['tamano_titulo']; ?> text-h3 font-primary font-thin text-primary">
                     <?php echo $content['titulo']; ?>
                 </p>
             </div>
@@ -75,12 +75,12 @@
 
             <?php if($content['cuerpo']) { ?>
             <div class="body w-full pb-20">
-                <p class="text-primary"><?php echo $content['cuerpo']; ?></p>
+                <p class="text-primary ipad:text-h5 text-h7"><?php echo $content['cuerpo']; ?></p>
             </div>
             <?php } ?>
 
             <?php if($content['subtitulo']) { ?>
-            <div class="subtitle w-full pb-20">
+            <div class="subtitle w-full pb-20 ipad:block hidden">
                 <p class="text-primary text-h3"><?php echo $content['subtitulo']; ?></p>
             </div>
             <?php } ?>
