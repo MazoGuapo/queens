@@ -87,8 +87,8 @@
 				$title = $menu_item->title;
 				?>
                 <li class="">
-                    <a href="<?php echo $link; ?>">
-                        <?php echo $title; ?>
+                    <a href="<?php echo $link; ?>" data-text="<?php echo $title; ?>">
+                        <span><?php echo $title; ?></span>
                     </a>
                 </li>
             <?php } ?>
