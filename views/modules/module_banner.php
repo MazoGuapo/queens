@@ -85,7 +85,13 @@
                     <?php if($button['link_tipo'] == 'externo') { ?>
                         <a class="<?php echo $button['estilo']; ?>" href="<?php echo $button['link_externo']; ?>">
                             <?php if($button['icono']) { ?>
-                                <img class="mr-3" src="<?php echo $button['icono']['sizes']['theme_full']; ?>">
+                                <button class="button button--fenrir">
+                                    <svg aria-hidden="true" class="progress" width="70" height="70" viewBox="0 0 70 70">
+                                        <path class="progress__circle" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path>
+                                        <path class="progress__path" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" pathLength="1"></path>
+                                    </svg>
+                                    <img class="mr-3" src="<?php echo $button['icono']['sizes']['theme_full']; ?>">
+                                </button>  
                             <?php } ?>
                             <?php echo $button['titulo']; ?>
                         </a>
@@ -103,7 +109,12 @@
                     <?php if($button['link_tipo'] == 'lg_gallery') { ?>
                         <a class="<?php echo $button['estilo']; ?> button_lg_iframe" href="<?php echo $button['link_lg_imagen']; ?>">
                             <?php if($button['icono']) { ?>
-                                <img class="mr-3" src="<?php echo $button['icono']['sizes']['theme_full']; ?>">
+                                <button class="button button--fenrir">
+                                    <svg aria-hidden="true" class="progress" width="70" height="70" viewBox="0 0 70 70">
+                                        <path class="progress__circle" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path>
+                                        <path class="progress__path" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" pathLength="1"></path>
+                                    </svg>
+                                </button>                                
                             <?php } ?>
                             <p><?php echo $button['titulo']; ?></p>
                         </a>
