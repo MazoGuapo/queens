@@ -9,7 +9,7 @@
         width: 70%;
         left: 50%;
         transform: translateX(-50%);
-        @apply absolute font-primary font-thin text-h1 text-white text-center;
+        @apply absolute font-primary font-thin ipadH:text-h1 ipad:text-h2 text-h3 text-white text-center;
         strong {
             @apply underline font-thin;
         }

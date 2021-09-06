@@ -12,7 +12,7 @@
 
     <div class="wrapper flex ipadH:flex-row flex-col">
 
-        <div class="wrapper_image ipadH:pb-0 pb-32">
+        <div class="wrapper_image ipadH:pb-0 ipad:pb-32 pb-20">
 
             <div class="dossier_text"><?php echo $dossier['texto']; ?></div>
 
@@ -29,7 +29,7 @@
         <div class="wrapper_content  flex flex-col <?php echo $alineacion; ?>">
 
             <?php if($content['titulo']) { ?>
-            <div class="title pb-20">
+            <div class="title ipad:pb-20 ipad-10">
                 <p class="text-<?php echo $content['tamano_titulo']; ?> font-primary font-light text-primary">
                     <?php echo $content['titulo']; ?>
                 </p>
