@@ -1,0 +1,14 @@
+.module-gallery-normal {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.module-gallery-icon {
+    max-width: 60px;
+    @screen ipad {
+        max-width: 80px;
+    }
+    @screen ipadH {
+        max-width: initial;
+    }
+}

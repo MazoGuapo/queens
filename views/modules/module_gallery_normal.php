@@ -10,7 +10,7 @@
         <div class="grid ipadH:grid-cols-2 grid-cols-1 ipadH:gap-96 gap-20 items-<?php echo $normal['alineacion_intro'] ?>">
             <!-- titulo -->
             <div class="font-primary text-<?php echo $normal['tamano_titulo'] ?> text-primary flex items-center">
-                <?php if($normal['icono']): ?><img src="<?php echo $normal['icono'] ?>" alt="" class="mr-4"><?php endif; ?>
+                <?php if($normal['icono']): ?><img src="<?php echo $normal['icono'] ?>" alt="" class="mr-4 module-gallery-icon"><?php endif; ?>
                 <?php echo $normal['titulo'] ?>
             </div>
             <!-- contenido -->
@@ -45,8 +45,10 @@
                 <!-- Slides -->
             </div>
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-buttons">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>    
         </div>
 
         <?php $n = 1; foreach ($normal['categorias'] as $cat) {  ?>

@@ -2,20 +2,23 @@
 $carrusel = get_sub_field('carrusel');
 ?>
 
-<div class="module-full module-gallery-carousel">
 
-    <div class="flex flex-col ipad:none items-center">
-        <div class="font-primary mb-10 text-h4 ipad:text-<?php echo $carrusel['tamano_titulo'] ?>"><?php echo $carrusel['titulo'] ?></div>
-        <div><?php echo $carrusel['contenido'] ?></div>
-    </div>                
+<div class="module-block-top ipad:none">
+    <div class="flex flex-col  items-center">
+        <div class="font-primary text-h4 ipad:text-<?php echo $carrusel['tamano_titulo'] ?>"><?php echo $carrusel['titulo'] ?></div>
+        <?php if($carrusel['contenido']): ?> <div class="mt-10"><?php echo $carrusel['contenido'] ?></div> <?php endif; ?>
+    </div>    
+</div>
+
+<div class="module-full module-gallery-carousel">               
     
     <div class="swiper swiper-carousel">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="mr-48 h-100 flex flex-col items-center">
-                    <div class="font-primary mb-10 text-<?php echo $carrusel['tamano_titulo'] ?>"><?php echo $carrusel['titulo'] ?></div>
-                    <div><?php echo $carrusel['contenido'] ?></div>
+                    <div class="font-primary text-<?php echo $carrusel['tamano_titulo'] ?>"><?php echo $carrusel['titulo'] ?></div>
+                    <?php if($carrusel['contenido']): ?> <div class="mt-10"><?php echo $carrusel['contenido'] ?></div> <?php endif; ?>
                 </div>
             </div>
             <?php $n = 1; foreach ($carrusel['categorias'] as $imagen) { ?>
