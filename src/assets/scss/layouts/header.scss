@@ -2,24 +2,11 @@
 /*********** HEADER ***********/
 /******************************/
 
-// .header_gracias,
-// .header_legal {
-//   .header_brand {
-//     margin: 4rem 0 !important;
-//     img {
-//       width: 100%;
-//     }
-//   }
-//   .menu li a {
-//     color: white !important;
-//   }
-// }
-
-// WRAP
+////////////////////// WRAP
 header {
   @extend %paddings_laterales;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   position: fixed;
   z-index: 500;
@@ -36,20 +23,27 @@ header {
 
   transition: all 0.3s;
 
+  @screen ipad {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   @media (min-width: 992px) {
     grid-template-areas: "logo nav";
   }
 }
 
+// shrink
 .shrink header {
-  background-color: white;
+  @apply bg-white;
 }
 
+// effect hide
 header.header_hide {
   transform: translateY(-100%);
 }
 
-// BRAND
+////////////////////// BRAND
 .header_brand {
   grid-area: logo;
   justify-self: flex-start;
@@ -82,6 +76,7 @@ header.header_hide {
   }
 }
 
+// dark
 .brand_dark {
   display: none;
 }
@@ -95,26 +90,23 @@ header.dark {
   }
 }
 
+// shrink
 .shrink {
-
   .brand_desktop {
     display: none;
   }
   .brand_mobile {
     display: block;
   }
-
   .brand_dark {
     display: block;
   }
-
   .brand_white {
     display: none;
   }
-
 }
 
-// MENU
+////////////////////// MENU
 header ul.menu {
   justify-self: flex-end;
   align-self: center;
@@ -141,11 +133,11 @@ header ul.menu {
     &:after {
       position: absolute;
       width: 100%;
-      height: 1px;
-      background: white;
+      height: 1px;      
       top: 100%;
       left: 0;
       pointer-events: none;
+      @apply bg-white;
     }
 
     &:before {
@@ -174,20 +166,20 @@ header ul.menu {
       transform-origin: 100% 50%;
       transform: translate3d(150%, 0, 0);
       transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
-  }
+    }
   
-  &:hover::after {
+    &:hover::after {
       transform: translate3d(0, 0, 0);
-  }
+    }
   
-  span {
+    span {
       display: inline-block;
       transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
-  }
+    }
   
-  &:hover span {
+    &:hover span {
       transform: translate3d(-150%, 0, 0);
-  }
+    }
 
   }
 }
@@ -196,6 +188,7 @@ header ul.menu li.current a:after {
   width: 100%;
 }
 
+// shrink & dark
 .shrink header ul.menu li a,
 header.dark ul.menu li a {
   @apply text-primary;
@@ -207,7 +200,7 @@ header.dark ul.menu li a {
   }
 }
 
-// BUTTON MENU
+////////////////////// BUTTON MENU
 .menu-button {
   grid-area: menbut;
   justify-self: flex-end;
@@ -229,6 +222,8 @@ header.dark ul.menu li a {
 
   cursor: pointer;
 
+  transition: all 0.3s;
+
   @media (min-width: 768px) {
     width: 32px;
   }
@@ -241,8 +236,8 @@ header.dark ul.menu li a {
 .menu-button span {
   width: 100%;
   height: 2px;
-  background: #645e58;
   display: block;
+  @apply bg-white;
 
   &:nth-child(2) {
     margin-top: 10px;
@@ -258,11 +253,51 @@ header.dark ul.menu li a {
   }
 }
 
-.shrink .menu-button span {
-  background-color: white;
+// shrink & dark
+.shrink .menu-button span,
+header.dark .menu-button span {
+  @apply bg-primary;
 }
 
+.menu_open .menu-button {
+  opacity: 0;
+  transform: translateX(100%);
+}
 
+.menu-indicator {
+  position: absolute;
+  right: 0;
+  top: 3.5rem;
+  display: flex;
+  align-items: center;
+  @apply text-white text-h8 uppercase;
+  transform: translateX(100%);
+  transition: all 0.3s;
+  opacity: 0;
+  @screen ipad {
+    top: 5.5rem;
+  }
+
+  &:after {
+    width: 0;
+    height: 2px;
+    content: '';
+    margin-left: 5px;
+    @apply bg-white;
+    transition: all 0.2s;    
+  }
+}
+
+.menu_open .menu-indicator {
+  transform: translateX(0);
+  opacity: 1;
+  &:after {
+    width: 2.5rem;
+    @screen ipad {
+      width: 5rem;
+    }
+  }
+}
 
 // SELECTOR IDIOMA
 // ul.language {
