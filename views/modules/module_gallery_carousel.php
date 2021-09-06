@@ -2,7 +2,12 @@
 $carrusel = get_sub_field('carrusel');
 ?>
 
-<div class="module-full  module-gallery-carousel">
+<div class="module-full module-gallery-carousel">
+
+    <div class="flex flex-col ipad:none items-center">
+        <div class="font-primary mb-10 text-h4 ipad:text-<?php echo $carrusel['tamano_titulo'] ?>"><?php echo $carrusel['titulo'] ?></div>
+        <div><?php echo $carrusel['contenido'] ?></div>
+    </div>                
     
     <div class="swiper swiper-carousel">
         <!-- Additional required wrapper -->
@@ -26,8 +31,10 @@ $carrusel = get_sub_field('carrusel');
             <!-- Slides -->
         </div>
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-buttons">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>        
     </div>
 
 </div>

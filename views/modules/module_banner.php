@@ -90,7 +90,7 @@
                                         <path class="progress__circle" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"></path>
                                         <path class="progress__path" d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" pathLength="1"></path>
                                     </svg>
-                                    <img class="mr-3" src="<?php echo $button['icono']['sizes']['theme_full']; ?>">
+                                    <img src="<?php echo $button['icono']['sizes']['theme_full']; ?>">
                                 </button>  
                             <?php } ?>
                             <?php echo $button['titulo']; ?>

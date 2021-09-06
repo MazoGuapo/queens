@@ -2,6 +2,7 @@
 /********** BOTONES ***********/
 /******************************/
 
+// NORMAL
 .btn {
   @include botones;
   @apply text-white bg-primary inline-block;
@@ -14,6 +15,7 @@
   }
 }
 
+// FILTER
 .btn_fliter {
   @include botones;
   @apply text-primary bg-secondary inline-block;
@@ -26,6 +28,7 @@
   }
 }
 
+// LINEA
 .btn-line {
   @include botones;
   @apply text-white bg-transparent inline-block;
@@ -38,12 +41,20 @@
   }
 }
 
-.btn_dark_transparent {
+// DARK 
+.btn_dark {
+  @include botones;
+  color: #FBF8EF ;
+  background-color: #948B82;
+  display: inline-block;
+}
+
+// DARK LINE
+.btn_dark_line {
   @include botones;
   border: 1px solid #645E58;
   color: #645E58;
   display: inline-block;
-
   &:hover {
     background-color: lightgray;
     color: white;
@@ -54,28 +65,21 @@
   }
 }
 
-.btn_dark {
-  @include botones;
-  color: #FBF8EF ;
-  background-color: #948B82;
-  display: inline-block;
-}
-
+// LINK
 .link {
   display: flex;
   align-items: center;
   @apply text-white;
-
-
 }
 
+// ICONO
 .button {
 	pointer-events: auto;
 	cursor: pointer;
 	background: #e7e7e7;
 	border: none;
 	padding: 1.5rem 3rem;
-	margin: 0;
+	margin: 0 1.5rem 0 0;
 	font-family: inherit;
 	font-size: inherit;
 	position: relative;
@@ -96,27 +100,34 @@
 	padding: 0;
 	-webkit-clip-path: circle(50% at 50% 50%);
 	clip-path: circle(50% at 50% 50%);
-	width: 120px;
-	height: 120px;
-	font-family: aktiv-grotesk-extended, sans-serif;
-    font-weight: 700;
-	text-transform: uppercase;
-	font-size: 0.85rem;
+	width: 4.8rem;
+	height: 4.8rem;
+  @screen ipad {
+    width: 7rem;
+	  height: 7rem;
+  }  
   img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 1rem;
   }
 }
 
 .progress {
 	position: absolute;
-	width: 80px;
-	height: 80px;
-	top: calc(50% - 40px);
-	left: calc(50% - 40px);
+	width: 4rem;
+	height: 4rem;
+	top: calc(50% - 2rem);
+	left: calc(50% - 2rem);
 	transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  @screen ipad {
+    width: 6rem;
+    height: 6rem;
+    top: calc(50% - 3rem);
+    left: calc(50% - 3rem);
+  }
 }
 
 .button--fenrir:hover .progress {
@@ -142,5 +153,5 @@
 }
 
 .button--fenrir:hover .progress__path {
-    stroke-dashoffset: 0;
+  stroke-dashoffset: 0;
 }
