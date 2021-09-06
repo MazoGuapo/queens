@@ -1,0 +1,8 @@
+.parallax-container {    
+    overflow: hidden;
+    .parallax-bg {
+        position: relative;
+        height: 120% !important;
+        top: -20%;
+    }
+}

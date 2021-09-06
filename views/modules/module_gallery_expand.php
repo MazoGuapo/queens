@@ -14,7 +14,6 @@ $expand = get_sub_field('expandible');
     <?php $n++;  } ?>
 </div>
 
-
 <?php $n = 1; foreach ($expand['categorias'] as $cat) {  ?>
     <div class="gallery_lg" id="expand_lg_open_<?php echo $n ?>">
         <?php foreach ($cat['galeria'] as $imagen) { ?>

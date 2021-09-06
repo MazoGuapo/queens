@@ -16,21 +16,6 @@
 
 @import "lightgallery.scss";
 
-// @import "image-compare-viewer";
+@import "fondo";
 
-.image_parallax {
-    overflow: hidden;
-    img {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        top: -20%;
-        left: -5%;
-        width: 120%;
-        height: 120%;
-    }
-}
+// @import "image-compare-viewer";

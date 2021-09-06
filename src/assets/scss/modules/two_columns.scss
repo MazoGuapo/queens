@@ -137,6 +137,8 @@ section.module_two_columns.active {
 
 
 .decoration {
+  position: relative;
+  z-index: 50;
 }
 
 .decoration img {

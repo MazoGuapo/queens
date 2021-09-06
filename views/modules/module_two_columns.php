@@ -24,20 +24,24 @@
 
 ?>
 
-<section class="module module-<?php echo $layout['lateral_paddings']; ?> module_two_columns min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color']; ?>">
+<section class="module module-<?php echo $layout['lateral_paddings']; ?> module_two_columns min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color']; ?> parallax-start">
 
     <div class="wrapper flex ipadH:flex-<?php echo $layout['flex_direction']; ?> flex-<?php echo $layout['flex_direction_mobile']; ?> ipad:flex-<?php echo $layout['flex_direction_ipad']; ?>">
 
-        <div class="wrapper_image">
+        <div class="wrapper_image ">
 
             <?php echo $output_imagen; ?>
 
             <?php if($media['imagen_2col']) { ?>
-                <img class="" src="<?php echo $media['imagen_2col']['sizes']['theme_full'] ?>" alt="">
+                <div class="parallax-container">
+                    <img src="<?php echo $media['imagen_2col']['sizes']['theme_full'] ?>" alt="" class="parallax-bg">
+                </div>
             <?php } ?>
 
             <?php if($media['video_2col']) { ?>
-                <video src="<?php echo $media['video_2col'] ?>" autoplay="true" loop="true" muted="true"></video>
+                <div class="parallax-container">
+                    <video src="<?php echo $media['video_2col'] ?>" autoplay="true" loop="true" muted="true"></video>
+                </div>
             <?php } ?>
 
             <?php if($media['carrusel_2col']) {

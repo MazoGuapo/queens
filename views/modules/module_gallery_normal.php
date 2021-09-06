@@ -23,7 +23,9 @@
     <?php if($normal['tipo'] == 'simple'): ?>
         <div class="module-width grid ipadH:grid-cols-4 grid-cols-2 ipadH:gap-32 gap-4">
             <?php foreach ($normal['galeria_simple'] as $imagen) { ?>
-                <img src="<?php echo $imagen['sizes']['theme_xlarge'] ?>" alt="">
+                <div class="parallax-container">
+                    <img src="<?php echo $imagen['sizes']['theme_xlarge'] ?>" alt="" class="parallax-bg">
+                </div>
             <?php } ?>
         </div>
     <?php elseif($normal['tipo'] == 'categorias'): ?>
@@ -38,7 +40,9 @@
                         data-gallery="normal_lg_open_<?php echo $n ?>"
                         class="button_lg">
                             <span class="image_baget text-white flex items-center text-h5" ><img class="mr-4" src="<?php bloginfo('template_url') ?>/src/assets/images/icon_play.png" alt=""><?php echo $imagen['titulo'] ?></span>
-                            <img src="<?php echo $imagen['galeria'][0]['sizes']['theme_xlarge'] ?>" alt="" class="carousel_bg"class="carousel_bg">
+                            <div class="carousel_bg">
+                                <img src="<?php echo $imagen['galeria'][0]['sizes']['theme_xlarge'] ?>" alt="" class="parallax-bg">
+                            </div>  
                         </a>
                     </div>
                 <?php $n++; } ?>
@@ -73,7 +77,9 @@
                         data-iframe-title="All new time tracking. Greater insight."
                         class="button_lg_iframe">
                             <span class="image_baget text-white flex items-center text-h5" ><img class="mr-4" src="<?php bloginfo('template_url') ?>/src/assets/images/icon_play.png" alt=""><?php echo $imagen['titulo'] ?></span>
-                            <img src="<?php echo $imagen['imagen']['sizes']['theme_xlarge'] ?>" alt="" class="carousel_bg">
+                            <div class="carousel_bg">
+                                <img src="<?php echo $imagen['galeria'][0]['sizes']['theme_xlarge'] ?>" alt="" class="parallax-bg">
+                            </div>
                         </a>
                     </div>
                 <?php $n++; } ?>

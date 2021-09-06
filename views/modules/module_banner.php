@@ -11,27 +11,28 @@
 <section class="module module_banner flex h-<?php echo $full_height; ?> w-full <?php echo $alineacion['horizontal'];?> <?php echo $alineacion['vertical'];?> <?php if($align_type !== 'custom'){echo $align_type; };?>">
 
     <!-- BACKGROUND -->
-    <div class="background">
-
+    <div class="background parallax-start">
+            
         <!-- BG - IMAGEN -->
         <?php if($bg['fondo_imagen']) { ?>
-            <img src="<?php echo $bg['fondo_imagen']['sizes']['theme_full'] ?>" alt="">
+            <img src="<?php echo $bg['fondo_imagen']['sizes']['theme_full'] ?>" alt="" class="parallax-bg">
         <?php } ?>
 
         <!-- BG - VIDEO -->
         <?php if($bg['fondo_video']) { ?>
-            <video src="<?php echo $bg['fondo_video'] ?>" autoplay="true" loop="true" muted="true"></video>
+            <video src="<?php echo $bg['fondo_video'] ?>" autoplay="true" loop="true" muted="true" class="parallax-bg"></video>
         <?php } ?>
 
         <!-- BG - CARRUSEL -->
         <?php if($bg['fondo_carrusel']) {
             $images = $bg['fondo_carrusel']; ?>
+            
             <div class="swiper swiper-banner">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <?php foreach($images as $image) { ?>
                         <div class="swiper-slide">
-                            <img src="<?php echo $image['sizes']['theme_full']; ?>">
+                            <img src="<?php echo $image['sizes']['theme_full']; ?>" class="parallax-bg">
                         </div>
                     <?php $n++; } ?>
                     <!-- Slides -->
@@ -44,7 +45,7 @@
     </div>
 
     <!-- CONTENIDOS -->
-    <div class="wrapper_content flex flex-col items-center text-center ipadH:w-2/5 w-full">
+    <div class="wrapper_content flex flex-col items-center text-center ipadH:w-6/12 w-full">
 
         <!-- sobretitulo -->
         <?php if($content['sobretitulo']) { ?>
@@ -55,7 +56,7 @@
 
         <!-- titulo -->
         <?php if($content['titulo']) { ?>
-            <div class="title pb-10">
+            <div class="title pb-10 animated_letters">
                 <p class="ipad:text-<?php echo $content['tamano_titulo']; ?> text-h2 font-primary font-thin text-white">
                     <?php echo $content['titulo']; ?>
                 </p>

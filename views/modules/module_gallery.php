@@ -4,7 +4,7 @@ $tipo = get_sub_field('tipo');
 $options = get_sub_field('opciones');
 ?>
 
-<div class="module module-gallery bg-<?php echo $options['bg_color']; ?>">
+<div class="module module-gallery bg-<?php echo $options['bg_color']; ?> parallax-start">
 
     <?php
     if( $tipo == 'carrusel'):

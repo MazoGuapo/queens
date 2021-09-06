@@ -16,6 +16,8 @@ formularios();
 shrink_body();
 // OCULTAR MENU
 jQuery('.menu__wrap').fadeOut('');
+// ANIMATED LETTERS
+// if ( jQuery('.animated_letters').length ) { animated_letters(); }
 
 /*****************************************/
 /******** LOADING PACE FIRST TIME ********/
@@ -27,12 +29,6 @@ paceOptions = {
 Pace.once('hide', function(){
   inicio();
 });
-
-// Pace.once('hide', function(){
-//   // INICIO
-//   inicio();
-//   console.log('pepito')
-// });
 
 /*****************************************/
 /*********** FUNCIONES INICIO ************/
@@ -58,7 +54,32 @@ function inicio() {
 }
 
 
+/*****************************************/
+/************* PARALLAX BG ***************/
+/*****************************************/
 
+module_backgorund();
+
+function module_backgorund() {
+  var controller3 = new ScrollMagic.Controller();
+  // build scenes
+  var revealElements = document.getElementsByClassName("parallax-start");
+  for (var i=0; i<revealElements.length; i++) { // create a scene for each element
+    new ScrollMagic.Scene({
+      triggerElement: revealElements[i], // y value not modified, so we can use element as trigger as well
+      duration: "100%",
+      triggerHook: "onLeave",
+    })
+    // .setTween(tween[i])
+    .setTween(jQuery(revealElements[i]).find('.parallax-bg'), {y: "20%", ease: Linear.easeNone}) // add class toggle
+    .addIndicators({name: "digit " + (i+1) }) // add indicators (requires plugin)
+    .addTo(controller3);
+  }
+}
+
+/*****************************************/
+/************* PARALLAX BG ***************/
+/*****************************************/
 const swiper = new Swiper('.swiper-banner', {
   // Optional parameters
   direction: 'horizontal',
@@ -73,7 +94,6 @@ const swiper = new Swiper('.swiper-banner', {
   },
 });
 
-
 const swiper2 = new Swiper('.swiper-gallery', {
   // Optional parameters
   direction: 'horizontal',
@@ -87,7 +107,6 @@ const swiper2 = new Swiper('.swiper-gallery', {
     prevEl: '.swiper-button-prev',
   },
 });
-
 
 const swiper3 = new Swiper('.swiper-carousel', {
   // Optional parameters

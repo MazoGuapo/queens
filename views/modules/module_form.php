@@ -8,11 +8,11 @@
 ?>
 
 <section
-    class="module module-<?php echo $layout['lateral_paddings']; ?> module_form h-full w-full bg-<?php echo $options['bg_color']; ?>">
+    class="module module-<?php echo $layout['lateral_paddings']; ?> module_form h-full w-full bg-<?php echo $options['bg_color']; ?> parallax-start">
 
     <div class="wrapper flex ipadH:flex-row flex-col">
 
-        <div class="wrapper_image ipadH:pb-0 pb-32">
+        <div class="wrapper_image ipadH:pb-0 pb-32 parallax-container">
 
             <div class="dossier_text"><?php echo $dossier['texto']; ?></div>
 
@@ -21,7 +21,7 @@
             </a>
 
             <?php if($image) { ?>
-                <img src="<?php echo $image['sizes']['theme_full'] ?>" alt="">
+                <img src="<?php echo $image['sizes']['theme_full'] ?>" alt="" class="parallax-bg ">
             <?php } ?>
 
         </div>
