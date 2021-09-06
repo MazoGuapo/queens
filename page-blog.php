@@ -25,26 +25,26 @@ if($posts):
 		?>
 <section class="module module_blog bg-secondary">
 
-    <div class="wrapper_featured flex">
+    <div class="wrapper_featured flex ipadH:flex-row flex-col">
 
-        <div class="wrapper_image w-2/4">
+        <div class="wrapper_image ipadH:w-2/4 w-full">
             <img src="<?php echo $large_image_url[0]; ?>">
         </div>
 
-        <div class="wrapper_content flex items-center justify-center  w-2/4">
+        <div class="wrapper_content flex items-center justify-center ipadH:w-2/4 w-full ipadH:pt-0 pt-20">
 
-            <div class="text-left w-3/5">
-                <div class="fecha pb-10">
+            <div class="text-left ipadH:w-3/5 w-full">
+                <div class="fecha ipad:pb-10 pb-8">
                     <p class="text-h4 text-primary font-thin font-primary italic"><?php echo get_the_date('d/m/Y'); ?>
                     </p>
                 </div>
 
-                <div class="titulo pb-10">
-                    <p class="uppercase text-h1 text-primary font-thin font-primary">
+                <div class="titulo ipad:pb-10 pb-5">
+                    <p class="ipad:uppercase ipad:text-h1 text-h3 text-primary ipad:font-thin font-light font-primary">
                         <?php echo get_the_title($post->ID) ?></p>
                 </div>
 
-                <a href="<?php echo get_permalink($post->ID) ?>" class="btn_dark_line">Leer más</a>
+                <a href="<?php echo get_permalink($post->ID) ?>" class="btn_dark_line ipad:inline-block hidden">Leer más</a>
             </div>
         </div>
     </div>

@@ -41,12 +41,11 @@
   }
 }
 
-// DARK 
+// DARK
 .btn_dark {
   @include botones;
   color: #FBF8EF ;
   background-color: #948B82;
-  display: inline-block;
 }
 
 // DARK LINE
@@ -54,7 +53,7 @@
   @include botones;
   border: 1px solid #645E58;
   color: #645E58;
-  display: inline-block;
+
   &:hover {
     background-color: lightgray;
     color: white;
@@ -83,7 +82,6 @@
 	font-family: inherit;
 	font-size: inherit;
 	position: relative;
-	display: inline-block;
 }
 
 .button::before,
@@ -105,7 +103,7 @@
   @screen ipad {
     width: 7rem;
 	  height: 7rem;
-  }  
+  }
   img {
     position: absolute;
     top: 50%;
