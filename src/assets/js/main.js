@@ -375,11 +375,20 @@ function menu() {
   function toggleMenu() {
     if (isOpen) {
       jQuery('.menu__wrap').fadeOut('');
-      jQuery('.close-button').fadeOut('');
+          jQuery('.close-button').fadeOut('');
+        setTimeout(
+          function(){   
+            jQuery('body').removeClass('menu_open');
+          },
+        150); 
     } else {
-      jQuery('.menu__wrap').fadeIn('');
-      jQuery('.close-button').fadeIn('');
-
+      jQuery('body').addClass('menu_open');
+      setTimeout(
+        function(){
+          jQuery('.menu__wrap').fadeIn('');
+          jQuery('.close-button').fadeIn('');
+        },
+      300);
     }
     isOpen = !isOpen;
   }

@@ -33,7 +33,7 @@
             <?php echo $output_imagen; ?>
 
             <?php if($media['imagen_2col']) { ?>
-                <img src="<?php echo $media['imagen_2col']['sizes']['theme_full'] ?>" alt="">
+                <img src="<?php echo $media['imagen_2col']['sizes']['theme_full'] ?>" alt="" class="" >
             <?php } ?>
 
             <?php if($media['video_2col']) { ?>

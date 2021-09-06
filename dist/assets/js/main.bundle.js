@@ -343,6 +343,8 @@
 	/********* FUNCION SHRINK BODY ***********/
 	/*****************************************/
 	function shrink_body() {
+
+
 	  var offset = 150;
 	  var duration = 300;
 	  jQuery(window).scroll(function () {
@@ -354,6 +356,19 @@
 	      jQuery('.header__shadow').fadeOut();
 	    }
 	  });
+
+
+	  var prevScrollpos = window.pageYOffset;
+	  window.onscroll = function() {
+	    var currentScrollPos = window.pageYOffset;
+	    if (prevScrollpos > currentScrollPos) {
+	      jQuery('header').removeClass('header_hide');
+	    } else {
+	      jQuery('header').addClass('header_hide');
+	    }
+	    prevScrollpos = currentScrollPos;
+	  }
+
 	}
 
 	/*****************************************/
@@ -406,11 +421,20 @@
 	  function toggleMenu() {
 	    if (isOpen) {
 	      jQuery('.menu__wrap').fadeOut('');
-	      jQuery('.close-button').fadeOut('');
+	          jQuery('.close-button').fadeOut('');
+	        setTimeout(
+	          function(){   
+	            jQuery('body').removeClass('menu_open');
+	          },
+	        150); 
 	    } else {
-	      jQuery('.menu__wrap').fadeIn('');
-	      jQuery('.close-button').fadeIn('');
-
+	      jQuery('body').addClass('menu_open');
+	      setTimeout(
+	        function(){
+	          jQuery('.menu__wrap').fadeIn('');
+	          jQuery('.close-button').fadeIn('');
+	        },
+	      300);
 	    }
 	    isOpen = !isOpen;
 	  }
