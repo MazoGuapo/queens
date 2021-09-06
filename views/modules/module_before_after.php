@@ -5,20 +5,20 @@ $options = get_sub_field('opciones');
 $content = get_sub_field('contenido');
 ?>
 
-<div class="module module-block module_before_after bg-<?php echo $options['bg_color']; ?> flex items-center flex-col">
+<div class="module module-block-top module_before_after bg-<?php echo $options['bg_color']; ?> flex items-center flex-col">
 
   <!-- CONTENIDOS -->
-  <div class="wrapper_content pb-40 flex flex-col <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>  items-center text-center  w-2/5">
+  <div class="wrapper_content ipad:pb-40 pb-20 flex flex-col <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>  items-center text-center  w-2/5">
 
   <?php if($content['sobretitulo']) { ?>
-      <div class="surtitle pb-20">
+      <div class="surtitle">
           <p class="font-primary text-secondary italic"><?php echo $content['sobretitulo']; ?></p>
       </div>
   <?php } ?>
 
   <?php if($content['titulo']) { ?>
-      <div class="title pb-10">
-          <p class="text-<?php echo $content['tamano_titulo']; ?> font-primary font-thin">
+      <div class="title">
+          <p class="ipad:text-<?php echo $content['tamano_titulo']; ?> text-h3 font-primary font-thin">
               <?php echo $content['titulo']; ?>
           </p>
       </div>

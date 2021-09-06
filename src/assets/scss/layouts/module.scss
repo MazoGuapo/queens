@@ -2,17 +2,40 @@
 
     // module block
     &-block {
-        @extend %paddings_laterales;
-        @extend %paddings_sections;
+      @extend %paddings_laterales;
+      @extend %paddings_sections;
+    }
+
+    &-block-top {
+      @extend .module-block;
+      padding-bottom: 0 !important;
     }
 
     // module full
     &-full {
         @extend %paddings_sections;
+
+        padding-left: var(--padding_mobile);
+        padding-right: var(--padding_mobile);
+
+        @screen ipad {
+          padding-left: var(--padding_ipad);
+          padding-right: var(--padding_ipad);
+        }
+
+        @screen ipadH {
+          padding-left: 0;
+          padding-right: 0;
+        }
+    }
+
+    &-full-top {
+      @extend .module-full;
+      padding-bottom: 0 !important;
     }
 
     &-width {
-        @extend %paddings_laterales;
+      @extend %paddings_laterales;
     }
 
 }

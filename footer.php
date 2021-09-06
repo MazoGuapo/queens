@@ -48,18 +48,18 @@
 
         <div class="grid_copyright">
             <p class="font-thin text-primary ipad:flex hidden">
-                <span class="pr-2">Managed by</span>
+                <span class="pr-2 text-h8">Managed by</span>
                 <img class="object-contain pr-2" src="<?php bloginfo('template_url')?>/src/assets/images/logo_asg.png">
                 <span class="pr-2">|</span>
-                <span class="pr-2">Design & Marketing by</span>
+                <span class="pr-2 text-h8">Design & Marketing by</span>
                 <img class="object-contain pr-2" src="<?php bloginfo('template_url')?>/src/assets/images/logo_weplan.png">
             </p>
             <p class="font-thin text-primary ipad:hidden flex justify-center">
-                <span class="pr-2">Managed by</span>
+                <span class="pr-2 text-h8">Managed by</span>
                 <img class="object-contain pr-2" src="<?php bloginfo('template_url')?>/src/assets/images/logo_asg.png">
             </p>
             <p class="font-thin text-primary ipad:hidden flex justify-center">
-                <span class="pr-2">Design & Marketing by</span>
+                <span class="pr-2 text-h8">Design & Marketing by</span>
                 <img class="object-contain pr-2" src="<?php bloginfo('template_url')?>/src/assets/images/logo_weplan.png">
             </p>
 

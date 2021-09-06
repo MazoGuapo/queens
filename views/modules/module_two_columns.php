@@ -26,14 +26,14 @@
 
 <section class="module module-<?php echo $layout['lateral_paddings']; ?> module_two_columns min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color']; ?>">
 
-    <div class="wrapper flex ipadH:flex-<?php echo $layout['flex_direction']; ?> flex-col-reverse">
+    <div class="wrapper flex ipadH:flex-<?php echo $layout['flex_direction']; ?> flex-<?php echo $layout['flex_direction_mobile']; ?> ipad:flex-<?php echo $layout['flex_direction_ipad']; ?>">
 
         <div class="wrapper_image">
 
             <?php echo $output_imagen; ?>
 
             <?php if($media['imagen_2col']) { ?>
-                <img src="<?php echo $media['imagen_2col']['sizes']['theme_full'] ?>" alt="">
+                <img class="" src="<?php echo $media['imagen_2col']['sizes']['theme_full'] ?>" alt="">
             <?php } ?>
 
             <?php if($media['video_2col']) { ?>
@@ -50,7 +50,7 @@
             <?php } ?>
 
             <?php if($media['pie_media']): ?>
-                <div class="w-full text-right mt-5 ">
+                <div class="pie_media w-full text-right mt-5 ">
                     <p class="text-h6"><?php echo $media['pie_media']; ?></p>
                 </div>
             <?php endif; ?>
@@ -66,8 +66,8 @@
             <?php } ?>
 
             <?php if($content['titulo']) { ?>
-            <div class="title w-4/5 pb-20">
-                <p class="ipad:text-<?php echo $content['tamano_titulo']; ?> text-h3 font-primary font-thin text-primary">
+            <div class="title ipadH:w-4/5 w-full pb-20 pt-20 ipad:pt-20">
+                <p class="ipad:text-<?php echo $content['tamano_titulo']; ?> text-h4 font-primary font-thin text-primary">
                     <?php echo $content['titulo']; ?>
                 </p>
             </div>

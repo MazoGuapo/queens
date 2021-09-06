@@ -10,7 +10,7 @@
 <section class="module module-block module_team flex flex-col min-h-<?php echo $full_height; ?> w-full bg-<?php echo $options['bg_color']; ?> <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>">
 
     <!-- CONTENIDOS -->
-    <div class="wrapper_content pb-40 flex flex-col <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>  items-center text-center  w-2/5">
+    <div class="wrapper_content ipadH:pb-40 ipad:pb-28 pb-20 flex flex-col <?php echo $align_text; ?> <?php echo $align['horizontal_title']; ?>  items-center text-center ipadH:w-2/5 ipad:w-4/5 w-full">
 
         <?php if($content['sobretitulo']) { ?>
             <div class="surtitle pb-20">
@@ -19,38 +19,26 @@
         <?php } ?>
 
         <?php if($content['titulo']) { ?>
-            <div class="title pb-10">
-                <p class="text-<?php echo $content['tamano_titulo']; ?> font-primary font-thin text-white">
+            <div class="title">
+                <p class="ipad:text-<?php echo $content['tamano_titulo']; ?> text-h3 font-primary font-thin text-white">
                     <?php echo $content['titulo']; ?>
                 </p>
             </div>
-        <?php } ?>
-
-        <?php if($content['subtitulo']) { ?>
-            <div class="subtitle pb-16">
-                <p class="text-white"><?php echo $content['subtitulo']; ?></p>
-            </div>
-        <?php } ?>
-
-        <?php if($content['cuerpo']) { ?>
-        <div class="body">
-            <p class=""><?php echo $content['cuerpo']; ?></p>
-        </div>
         <?php } ?>
 
     </div>
 
     <!-- ICONOS -->
     <div class="wrapper_icons w-full">
-        <div class="grid grid-cols-2 laptop:grid-cols-4 grid-flow-row gap-y-40">
+        <div class="grid grid-cols-2 laptop:grid-cols-4 grid-flow-row ipadH:gap-y-40 gap-y-20">
             <?php $n=1; foreach($miembro as $member) { ?>
-            <div class="member flex flex-col items-start">
-                
-                <a href="<?php echo $member['link']['enlace'] ?>" class="font-primary italic text-white text-h5 mb-32">
+            <div class="member flex flex-col ipadH:items-star items-center">
+
+                <a href="<?php echo $member['link']['enlace'] ?>" class="font-primary italic text-white text-h5 ipadH:mb-32 ipad:mb-20 mb-10">
                     <?php echo $member['link']['texto'] ?>
                 </a>
 
-                <p class="font-primary text-white text-h3 mb-32">
+                <p class="font-primary text-white ipad:text-h3 text-h4 ipadH:mb-32 ipad:mb-20 mb-10">
                     <?php echo $member['titulo'] ?>
                 </p>
 
@@ -69,7 +57,7 @@
 <?php $n=1; foreach($miembro as $member) { ?>
     <dialog id="modal_member<?php echo $n; ?>" class="bg-transparent z-0 relative w-screen h-screen">
     <div class="flex justify-center items-start overflow-x-hidden overflow-y-auto fixed left-0 top-0 w-full h-full bg-gray-900 bg-opacity-50 z-50 transition-opacity duration-300 opacity-0">
-        <div class="bg-primary bg-opacity-50 flex w-screen min-h-full relative flex flex-col justify-center items-center text-white">
+        <div class="bg-primary bg-opacity-50 w-screen min-h-full relative flex flex-col justify-center items-center text-white">
 
             <a class="absolute top-8 right-8 text-h6 cursor-pointer" onclick="modalClose('modal_member<?php echo $n; ?>')">Cerrar</a>
 
@@ -88,7 +76,7 @@
                 </div>
 
             </div>
-            
+
             <!-- <div class="p-7 flex items-center w-full">
                     <div class="text-gray-900 font-bold text-lg">Modal Top</div>
                     <svg onclick="modalClose('modal_member<?php echo $n; ?>')" class="ml-auto fill-current text-gray-700 w-5 h-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
@@ -102,10 +90,10 @@
 
 <script>
     function openModal(key) {
-    document.getElementById(key).showModal(); 
-    document.body.setAttribute('style', 'overflow: hidden;'); 
-    document.getElementById(key).children[0].scrollTop = 0; 
-    document.getElementById(key).children[0].classList.remove('opacity-0'); 
+    document.getElementById(key).showModal();
+    document.body.setAttribute('style', 'overflow: hidden;');
+    document.getElementById(key).children[0].scrollTop = 0;
+    document.getElementById(key).children[0].classList.remove('opacity-0');
     document.getElementById(key).children[0].classList.add('opacity-100')
     }
 

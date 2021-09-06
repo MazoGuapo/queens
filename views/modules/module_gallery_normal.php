@@ -6,8 +6,8 @@
 <div class="module-full module-gallery-normal">
 
     <!-- INTRO -->
-    <div class="module-width mb-40">
-        <div class="grid ipad:grid-cols-2 gap-96 items-<?php echo $normal['alineacion_intro'] ?>">
+    <div class="module-width ipadH:mb-40 mb-20">
+        <div class="grid ipadH:grid-cols-2 grid-cols-1 ipadH:gap-96 gap-20 items-<?php echo $normal['alineacion_intro'] ?>">
             <!-- titulo -->
             <div class="font-primary text-<?php echo $normal['tamano_titulo'] ?> text-primary flex items-center">
                 <?php if($normal['icono']): ?><img src="<?php echo $normal['icono'] ?>" alt="" class="mr-4"><?php endif; ?>
@@ -21,7 +21,7 @@
     </div>
 
     <?php if($normal['tipo'] == 'simple'): ?>
-        <div class="module-width grid grid-cols-4 gap-32">
+        <div class="module-width grid ipadH:grid-cols-4 grid-cols-2 ipadH:gap-32 gap-4">
             <?php foreach ($normal['galeria_simple'] as $imagen) { ?>
                 <img src="<?php echo $imagen['sizes']['theme_xlarge'] ?>" alt="">
             <?php } ?>
