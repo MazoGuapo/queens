@@ -12,7 +12,7 @@
 
     <div class="wrapper flex ipadH:flex-row flex-col">
 
-        <div class="wrapper_image ipadH:pb-0 ipad:pb-32 pb-20">
+        <div class="wrapper_image ipadH:pb-0 ipad:pb-32 pb-20 parallax-container">
 
             <div class="dossier_text"><?php echo $dossier['texto']; ?></div>
 
