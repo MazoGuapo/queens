@@ -44,7 +44,7 @@ if($posts):
                         <?php echo get_the_title($post->ID) ?></p>
                 </div>
 
-                <a href="<?php echo get_permalink($post->ID) ?>" class="btn_dark_transparent">Leer más</a>
+                <a href="<?php echo get_permalink($post->ID) ?>" class="btn_dark_line">Leer más</a>
             </div>
         </div>
     </div>

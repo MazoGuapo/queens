@@ -1,12 +1,13 @@
-.swiper {
+/******************************/
+/*********** SWIPER ***********/
+/******************************/
 
+.swiper {
     max-width: 100%;
     overflow : hidden;
     position : relative;
-
     &-pagination {
         bottom: 9rem !important;
-
         .swiper-pagination-bullet {
             background-color: white !important;
             width           : 1.2rem;
@@ -14,17 +15,27 @@
         }
     }
 
+    .swiper-buttons {
+        @media (max-width: 767px) {
+            display: flex;
+            padding-left: var(--padding_mobile);
+            padding-top: var(--padding_mobile);;
+        }
+    }
+
     .swiper-button-next,
     .swiper-button-prev {
-        width : 3rem !important;
-        height: 3rem !important;
-
-        @media (min-width: 768px) {
-            width : 6rem !important;
-            height: 6rem !important;
+        @media (max-width: 767px) {
+            position: relative;
+            left: initial;
+            right: initial;
+            top: initial;
+            margin: 0;
+            margin-right: 1rem;
         }
-
-        @media (min-width: 992px) {
+        width : 3.8rem !important;
+        height: 3.8rem !important;
+        @screen ipad {
             width : 9rem !important;
             height: 9rem !important;
         }
@@ -39,18 +50,23 @@
     }
 
     .swiper-button-prev:after {
-        background-image: url(../../images/arrow_left.png);
+        background-image: url(../../images/arrow_left_mobile.png);
+        @screen ipad {
+            background-image: url(../../images/arrow_left.png);
+        }
     }
 
     .swiper-button-next:after {
-        background-image: url(../../images/arrow_right.png);
+        background-image: url(../../images/arrow_right_mobile.png);
+        @screen ipad {
+            background-image: url(../../images/arrow_right.png);
+        }
     }
 
     // BANNER
     &-banner {
         width : 100%;
         height: 100vh;
-
         img {
             width          : 100%;
             height         : 100vh;
@@ -64,7 +80,6 @@
     &-normal {
         .swiper-slide {
             width: fit-content;
-
             .carousel_bg {
                 height: 50vh;
                 width : auto;
@@ -104,15 +119,25 @@
 
 
 .swiper-carousel .swiper-wrapper {
+
+    .swiper-slide:nth-child(2) {
+        padding-left: var(--padding_mobile);
+        @screen ipad {
+            padding-left: 0;
+        }
+    } 
+
     .swiper-slide:first-child {
         opacity     : 0;
         transition  : all 0.3s;
         width       : 50%;
         padding-left: var(--padding_mobile);
         align-self: center;
+        display: none;
 
         @screen ipad {
             padding-left: var(--padding_ipad);
+            display: block;
         }
 
         @screen ipadH {
